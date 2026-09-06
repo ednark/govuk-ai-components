@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System search result item demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search result item (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "search-result-item",
+    "govukClass": "gem-c-search-result",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "search",
+      "results",
+      "listing",
+      "metadata",
+      "publishing-frontend"
+    ],
+    "description": "Search/browse result item with sub-results and update dates.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Listing search or browse results with descriptions, sub-results, and update dates",
+      "The gov.uk/search/all results pattern"
+    ],
+    "avoidWhen": [
+      "Tabular data — use table"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Each result: title link, description, optional nested sub-results list, and 'Updated:' metadata. Sub-results are indented links to sections of the same page. Date format: 'Updated: 8 June 2026'.",
+    "relatedComponents": [
+      "table",
+      "pagination",
+      "in-page-navigation"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 100,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      ".",
+      "g",
+      "e",
+      "m",
+      "-",
+      "c",
+      "s",
+      "a",
+      "r",
+      "h",
+      "u",
+      "l",
+      "t",
+      "{",
+      "i",
+      "n",
+      ":",
+      "1",
+      "2",
+      "5",
+      " ",
+      "0",
+      ";",
+      "x",
+      "w",
+      "d",
+      "3",
+      "8",
+      "}",
+      "\n",
+      "_",
+      "f",
+      "o",
+      "z",
+      "k",
+      "#",
+      "7",
+      "b",
+      "p",
+      "y",
+      "4",
+      "6"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "Title as the primary link with its accessible name",
+      "'Updated:' metadata as visible text",
+      "Sub-results nested under their parent result"
+    ],
+    "editable": [
+      "Title",
+      "Description",
+      "Metadata dates",
+      "Sub-result links"
+    ],
+    "limitations": [
+      "Component comes from govuk-publishing-frontend (gem- prefixed classes), not the core Design System — flagged for provenance"
+    ],
+    "portableInvariants": [
+      "Title link meaningful out of context",
+      "Dates in visible text, not title-only"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://www.gov.uk/search/all",
+    "method": "live-site observation"
+  },
+  "file": "search-result-item/default.html",
+  "title": "Search result item (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="gem-c-search-result">
+  <h2 class="gem-c-search-result__title">
+    <a href="#" class="gem-c-search-result__title-link">Companies House</a>
+  </h2>
+  <p class="gem-c-search-result__description">We incorporate and dissolve limited companies. We register company information and make it available to the public.</p>
+  <p class="gem-c-search-result__metadata">Updated: 8 June 2026</p>
+</div>
+<div class="cap">search-result-item default</div>
+</body>
+</html>

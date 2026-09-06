@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 41,
+  "total": 45,
   "designSystem": "GOV.UK Design System 5.x",
   "facets": {
     "gdsComponentType": {
@@ -25,8 +25,10 @@
       "phase-banner": 1,
       "prev-next": 1,
       "radios": 3,
+      "search-result-item": 2,
       "select": 2,
       "skip-link": 1,
+      "step-by-step-navigation": 2,
       "summary-list": 1,
       "table": 1,
       "tabs": 1,
@@ -38,70 +40,117 @@
     },
     "section": {
       "utilities": 2,
-      "navigation": 9,
+      "navigation": 11,
       "forms": 22,
       "feedback": 4,
-      "data-display": 4
+      "data-display": 6
     },
     "variant": {
-      "default": 29,
+      "default": 31,
       "collapse-on-mobile": 1,
       "disabled": 1,
       "start": 1,
       "conditional": 1,
       "error": 7,
-      "inline": 1
+      "inline": 1,
+      "with-sub-results": 1,
+      "with-completed-steps": 1
     },
     "requiresJs": {
-      "required": 3,
-      "no": 23,
+      "required": 5,
+      "no": 25,
       "optional": 15
     },
     "interaction": {
-      "click": 24,
-      "keyboard": 16,
-      "focus": 32,
+      "click": 28,
+      "keyboard": 18,
+      "focus": 34,
       "type": 6,
       "change": 2
     },
     "a11y": {
-      "wcag22AA": 41,
-      "keyboardNav": 36,
-      "screenReader": 41,
-      "reducedMotion": 41,
-      "forcedColors": 41,
-      "ariaAttributes": 41
+      "wcag22AA": 45,
+      "keyboardNav": 40,
+      "screenReader": 45,
+      "reducedMotion": 45,
+      "forcedColors": 45,
+      "ariaAttributes": 45
     },
     "govCompliance": {
-      "PSBAR 2018": 41,
-      "WCAG 2.2 AA": 41,
-      "GDS Service Standard": 41
+      "PSBAR 2018": 45,
+      "WCAG 2.2 AA": 45,
+      "GDS Service Standard": 45
     },
     "costTier": {
-      "moderate": 18,
-      "cheap": 23
+      "moderate": 20,
+      "cheap": 25
     },
     "prerequisites": {
       "form-group": 16
     },
     "compositionRecipes": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 2,
+      "5": 4,
+      "6": 2,
+      "7": 4,
+      "8": 4,
       "task-list-pattern": 3,
       "page-template": 5,
       "ask-users-for-information": 7,
       "check-answers-flow": 5,
-      "error-summary-flow": 7
+      "error-summary-flow": 7,
+      ".": 4,
+      "g": 4,
+      "e": 4,
+      "m": 4,
+      "-": 4,
+      "c": 4,
+      "s": 4,
+      "a": 4,
+      "r": 4,
+      "h": 4,
+      "u": 4,
+      "l": 4,
+      "t": 4,
+      "{": 4,
+      "i": 4,
+      "n": 4,
+      ":": 4,
+      " ": 4,
+      ";": 4,
+      "x": 4,
+      "w": 4,
+      "d": 4,
+      "}": 4,
+      "\n": 4,
+      "_": 4,
+      "f": 4,
+      "o": 4,
+      "z": 2,
+      "k": 4,
+      "#": 4,
+      "b": 4,
+      "p": 4,
+      "y": 4,
+      "v": 2,
+      "j": 2,
+      "%": 2
     },
     "piiHandling": {
-      "displays_only": 18,
+      "displays_only": 22,
       "none": 6,
       "accepts_input": 17
     },
     "touchTargetSize": {
-      "44px": 36,
+      "44px": 40,
       "n/a": 5
     },
     "supportedTokenProfiles": {
-      "highContrast": 41
+      "highContrast": 45
     }
   }
 }

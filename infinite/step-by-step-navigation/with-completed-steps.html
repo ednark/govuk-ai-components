@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System step by step navigation demonstrating the with-completed-steps variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Step by step navigation (with-completed-steps)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "step-by-step-navigation",
+    "govukClass": "app-step-nav",
+    "section": "navigation",
+    "variant": "with-completed-steps",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "step",
+      "journey",
+      "guides",
+      "publishing-frontend"
+    ],
+    "description": "GOV.UK step-by-step journey navigation (govuk-publishing-frontend).",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Guiding users through a multi-step journey that spans several guides",
+      "Showing which steps are completed vs not started"
+    ],
+    "avoidWhen": [
+      "Single-page transactions — use task-list or simple headings",
+      "Content the user must read fully"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Each step is li.app-step-nav__step with a numbered circle and a collapsible panel. Show/hide-all and step toggling are managed by the publishing-frontend JS (data-show-all-text / data-hide-all-text).",
+    "relatedComponents": [
+      "task-list",
+      "in-page-navigation"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 362,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      ".",
+      "a",
+      "p",
+      "-",
+      "s",
+      "t",
+      "e",
+      "n",
+      "v",
+      "{",
+      "b",
+      "o",
+      "r",
+      "d",
+      "l",
+      "f",
+      ":",
+      "2",
+      "x",
+      " ",
+      "i",
+      "#",
+      "1",
+      "7",
+      "0",
+      "8",
+      ";",
+      "m",
+      "g",
+      "5",
+      "}",
+      "\n",
+      "_",
+      "y",
+      "h",
+      "c",
+      "j",
+      "u",
+      "w",
+      "%",
+      "k",
+      "3"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "app-step-nav__step / __heading / __circle / __panel structure",
+      "js-step and js-panel hook classes (JS-owned)",
+      "Step completion conveyed by the circle style AND text"
+    ],
+    "editable": [
+      "Step titles",
+      "Step content",
+      "Show/hide button text"
+    ],
+    "limitations": [
+      "Component comes from govuk-publishing-frontend, not the core GOV.UK Design System — flagged for provenance",
+      "Without JS all step panels render expanded"
+    ],
+    "portableInvariants": [
+      "Each step is a real list item",
+      "Completion is textually conveyed, not colour-only"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://www.gov.uk/search/all",
+    "method": "live-site observation"
+  },
+  "file": "step-by-step-navigation/with-completed-steps.html",
+  "title": "Step by step navigation (with-completed-steps)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="app-step-nav app-step-nav--large" data-show-all-text="Show all" data-hide-all-text="Hide all">
+  <ol class="app-step-nav__steps">
+    <li class="app-step-nav__step js-step" id="step-done">
+      <div class="app-step-nav__header js-toggle-panel" data-position="1">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background"><span aria-hidden="true">✓</span><span class="govuk-visually-hidden">Step completed: </span></span></span></span>
+          <span class="js-step-title">Check you're eligible</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-done">
+        <p class="app-step-nav__body">You confirmed your eligibility.</p>
+      </div>
+    </li>
+    <li class="app-step-nav__step js-step" id="step-next">
+      <div class="app-step-nav__header js-toggle-panel" data-position="2">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle app-step-nav__circle--number"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background">2</span></span></span>
+          <span class="js-step-title">Apply</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-next" hidden>
+        <p class="app-step-nav__body">Start your application.</p>
+      </div>
+    </li>
+  </ol>
+</div>
+<div class="cap">step-by-step-navigation with-completed-steps</div>
+</body>
+</html>

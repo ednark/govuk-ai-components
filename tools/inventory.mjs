@@ -1305,7 +1305,165 @@ export const inventory = [
       <p class="govuk-body">Use technical terms where precision matters.</p>
     </div>
   </div>
-</div>`,  }
+</div>`,
+  },
+  {
+    dir: "step-by-step-navigation",
+    name: "Step by step navigation",
+    cls: "app-step-nav",
+    section: "navigation",
+    requiresJs: "required",
+    interaction: ["click", "keyboard"],
+    pii: "displays_only",
+    audit: false,
+    useWhen: ["Guiding users through a multi-step journey that spans several guides", "Showing which steps are completed vs not started"],
+    avoidWhen: ["Single-page transactions — use task-list or simple headings", "Content the user must read fully"],
+    agentPrompt: "Each step is li.app-step-nav__step with a numbered circle and a collapsible panel. Show/hide-all and step toggling are managed by the publishing-frontend JS (data-show-all-text / data-hide-all-text).",
+    preserve: [
+      "app-step-nav__step / __heading / __circle / __panel structure",
+      "js-step and js-panel hook classes (JS-owned)",
+      "Step completion conveyed by the circle style AND text"
+    ],
+    editable: ["Step titles", "Step content", "Show/hide button text"],
+    limitations: [
+      "Component comes from govuk-publishing-frontend, not the core GOV.UK Design System — flagged for provenance",
+      "Without JS all step panels render expanded"
+    ],
+    invariants: ["Each step is a real list item", "Completion is textually conveyed, not colour-only"],
+    related: ["task-list", "in-page-navigation"],
+    tags: ["step", "journey", "guides", "publishing-frontend"],
+    description: "GOV.UK step-by-step journey navigation (govuk-publishing-frontend).",
+    provenance: { observed: "2026-09-06", source: "https://www.gov.uk/search/all", method: "live-site observation" },
+    variants: [
+      {
+        file: "default", variant: "default",
+        desc: "Step-by-step navigation with numbered steps.",
+        markup: `<div class="app-step-nav app-step-nav--large" data-show-all-text="Show all" data-hide-all-text="Hide all">
+  <ol class="app-step-nav__steps">
+    <li class="app-step-nav__step js-step" id="step-1">
+      <div class="app-step-nav__header js-toggle-panel" data-position="1">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle app-step-nav__circle--number"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background">1</span></span></span>
+          <span class="js-step-title">Check you're eligible</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-1">
+        <p class="app-step-nav__body">Confirm the type of visa you need before applying.</p>
+      </div>
+    </li>
+    <li class="app-step-nav__step js-step" id="step-2">
+      <div class="app-step-nav__header js-toggle-panel" data-position="2">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle app-step-nav__circle--number"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background">2</span></span></span>
+          <span class="js-step-title">Prepare the documents you need</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-2" hidden>
+        <p class="app-step-nav__body">Gather your passport and supporting documents.</p>
+      </div>
+    </li>
+  </ol>
+</div>`
+      },
+      {
+        file: "with-completed-steps", variant: "with-completed-steps",
+        desc: "Step-by-step navigation with a completed step.",
+        markup: `<div class="app-step-nav app-step-nav--large" data-show-all-text="Show all" data-hide-all-text="Hide all">
+  <ol class="app-step-nav__steps">
+    <li class="app-step-nav__step js-step" id="step-done">
+      <div class="app-step-nav__header js-toggle-panel" data-position="1">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background"><span aria-hidden="true">✓</span><span class="govuk-visually-hidden">Step completed: </span></span></span></span>
+          <span class="js-step-title">Check you're eligible</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-done">
+        <p class="app-step-nav__body">You confirmed your eligibility.</p>
+      </div>
+    </li>
+    <li class="app-step-nav__step js-step" id="step-next">
+      <div class="app-step-nav__header js-toggle-panel" data-position="2">
+        <h2 class="app-step-nav__heading">
+          <span class="app-step-nav__circle app-step-nav__circle--number"><span class="app-step-nav__circle-inner"><span class="app-step-nav__circle-background">2</span></span></span>
+          <span class="js-step-title">Apply</span>
+        </h2>
+      </div>
+      <div class="app-step-nav__panel js-panel" id="step-panel-next" hidden>
+        <p class="app-step-nav__body">Start your application.</p>
+      </div>
+    </li>
+  </ol>
+</div>`
+      }
+    ]
+  },
+  {
+    dir: "search-result-item",
+    name: "Search result item",
+    cls: "gem-c-search-result",
+    section: "data-display",
+    requiresJs: "no",
+    interaction: ["click", "focus"],
+    pii: "displays_only",
+    audit: false,
+    useWhen: ["Listing search or browse results with descriptions, sub-results, and update dates", "The gov.uk/search/all results pattern"],
+    avoidWhen: ["Tabular data — use table"],
+    agentPrompt: "Each result: title link, description, optional nested sub-results list, and 'Updated:' metadata. Sub-results are indented links to sections of the same page. Date format: 'Updated: 8 June 2026'.",
+    preserve: [
+      "Title as the primary link with its accessible name",
+      "'Updated:' metadata as visible text",
+      "Sub-results nested under their parent result"
+    ],
+    editable: ["Title", "Description", "Metadata dates", "Sub-result links"],
+    limitations: [
+      "Component comes from govuk-publishing-frontend (gem- prefixed classes), not the core Design System — flagged for provenance"
+    ],
+    invariants: ["Title link meaningful out of context", "Dates in visible text, not title-only"],
+    related: ["table", "pagination", "in-page-navigation"],
+    tags: ["search", "results", "listing", "metadata", "publishing-frontend"],
+    description: "Search/browse result item with sub-results and update dates.",
+    provenance: { observed: "2026-09-06", source: "https://www.gov.uk/search/all", method: "live-site observation" },
+    defaultMarkup: `<div class="gem-c-search-result">
+  <h2 class="gem-c-search-result__title">
+    <a href="#" class="gem-c-search-result__title-link">Companies House</a>
+  </h2>
+  <p class="gem-c-search-result__description">We incorporate and dissolve limited companies. We register company information and make it available to the public.</p>
+  <p class="gem-c-search-result__metadata">Updated: 8 June 2026</p>
+</div>`,
+    variants: [
+      {
+        file: "default", variant: "default",
+        desc: "Search result with description and update date.",
+        markup: `<div class="gem-c-search-result">
+  <h2 class="gem-c-search-result__title">
+    <a href="#" class="gem-c-search-result__title-link">Companies House</a>
+  </h2>
+  <p class="gem-c-search-result__description">We incorporate and dissolve limited companies. We register company information and make it available to the public.</p>
+  <p class="gem-c-search-result__metadata">Updated: 8 June 2026</p>
+</div>`
+      },
+      {
+        file: "with-sub-results", variant: "with-sub-results",
+        desc: "Search result with nested sub-result links.",
+        markup: `<div class="gem-c-search-result">
+  <h2 class="gem-c-search-result__title">
+    <a href="#" class="gem-c-search-result__title-link">HMRC online services: sign in or set up an account</a>
+  </h2>
+  <p class="gem-c-search-result__description">Sign in or set up a personal or business tax account, Self Assessment, Corporation Tax, PAYE for employers, VAT and other services.</p>
+  <ul class="gem-c-search-result__sub-results">
+    <li>
+      <a href="#" class="gem-c-search-result__sub-result-link">Sign in or set up an account</a>
+      <p class="gem-c-search-result__sub-result-description">Sign in to your HM Revenue and Customs (HMRC) online account.</p>
+    </li>
+    <li>
+      <a href="#" class="gem-c-search-result__sub-result-link">Get help with signing in</a>
+      <p class="gem-c-search-result__sub-result-description">You can get help with signing in to HMRC online services.</p>
+    </li>
+  </ul>
+</div>`
+      }
+    ]
+  }
 ];
 
 // Variant markup for components whose variants are defined inline above but
