@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System error summary demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error summary (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "error-summary",
+    "govukClass": "govuk-error-summary",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "error",
+      "validation",
+      "summary",
+      "form",
+      "a11y"
+    ],
+    "description": "Page-level validation summary with links to failing fields.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Top of a page when a form submission fails validation",
+      "Every validation-failure state, without exception"
+    ],
+    "avoidWhen": [
+      "Static pages without forms",
+      "Individual field errors alone — the summary complements field errors, never replaces them"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "List each error as a link pointing to the failing control's id. Keep the role='alert' container — govuk-frontend moves focus here on failed submission.",
+    "relatedComponents": [
+      "form-group",
+      "text-input",
+      "button"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 107,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "ask-users-for-information",
+      "error-summary-flow"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "role='alert' on the container",
+      "Links in govuk-error-summary__list pointing to failing control ids",
+      "Heading ('There is a problem') structure"
+    ],
+    "editable": [
+      "Title text",
+      "Error link text (must match field error wording)",
+      "Anchor targets"
+    ],
+    "limitations": [
+      "Do not rely on colour alone — each error carries text",
+      "One summary per page"
+    ],
+    "portableInvariants": [
+      "role='alert'",
+      "Error links resolve to real control ids"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "error-summary/default.html",
+  "title": "Error summary (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">There is a problem</h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li><a href="#sort-code">Enter a sort code</a></li>
+        <li><a href="#account-number">Enter an account number</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="cap">error-summary default</div>
+</body>
+</html>

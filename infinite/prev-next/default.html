@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System pagination (prev/next) demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagination (prev/next) (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "prev-next",
+    "govukClass": "govuk-pagination",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "pagination",
+      "prev",
+      "next",
+      "navigation"
+    ],
+    "description": "Previous/next pagination for sequential content.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Guiding users through sequential content or paged results"
+    ],
+    "avoidWhen": [
+      "Question flows — use back-link + button instead"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit labels and hrefs. Use the simple prev/next variant for sequential content; numbered lists for paginated results. Keep aria-label='Pagination'.",
+    "relatedComponents": [
+      "back-link",
+      "table"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 159,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "nav aria-label='Pagination'",
+      "aria-current='page' on the active item"
+    ],
+    "editable": [
+      "Link text",
+      "hrefs",
+      "Numbered vs prev/next style"
+    ],
+    "limitations": [
+      "Do not mix numbered and prev/next in one control"
+    ],
+    "portableInvariants": [
+      "Pagination landmark labelled"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "prev-next/default.html",
+  "title": "Pagination (prev/next) (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item--prev">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+        <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span></span>
+      </a>
+    </li>
+    <li class="govuk-pagination__item--next">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+        <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="cap">prev-next default</div>
+</body>
+</html>

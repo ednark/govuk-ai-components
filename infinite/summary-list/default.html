@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System summary list demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summary list (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "summary-list",
+    "govukClass": "govuk-summary-list",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "summary",
+      "check-answers",
+      "key-value"
+    ],
+    "description": "Key/value summary list with optional change actions (check answers).",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Check-answers pages (values + Change links)",
+      "Displaying key/value response data"
+    ],
+    "avoidWhen": [
+      "True tabular data — use table"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Each row is key, value, optional action. Change links must state what they change for screen readers (visually-hidden suffix). Remove the actions column in read-only contexts with govuk-summary-list--no-border.",
+    "relatedComponents": [
+      "button",
+      "panel",
+      "error-summary"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 164,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "check-answers-flow"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "dl/dt/dd structure per row",
+      "Visually-hidden context in Change links",
+      "Row key/value pairing"
+    ],
+    "editable": [
+      "Row keys and values",
+      "Change-link targets"
+    ],
+    "limitations": [
+      "Without actions the list must still read sensibly as plain pairs"
+    ],
+    "portableInvariants": [
+      "dl semantics for key/value pairs"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "summary-list/default.html",
+  "title": "Summary list (default)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-summary-box"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Name</dt>
+    <dd class="govuk-summary-list__value">Sarah Philips</dd>
+    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a></dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Date of birth</dt>
+    <dd class="govuk-summary-list__value">5 January 1979</dd>
+    <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a></dd>
+  </div>
+</dl>
+<div class="cap">summary-list default</div>
+</body>
+</html>

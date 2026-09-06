@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System radios demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radios (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "radios",
+    "govukClass": "govuk-radios",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "focus",
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "radio",
+      "single-choice",
+      "form",
+      "options"
+    ],
+    "description": "Radio group for single-choice questions with error support.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Exactly one choice from a small set of options",
+      "Yes/no questions"
+    ],
+    "avoidWhen": [
+      "Multiple selections — use checkboxes",
+      "Long option lists — use select"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit option labels and values. govuk-radios--inline stacks options horizontally for short labels. For errors add govuk-radios--error, govuk-form-group--error, linked govuk-error-message, and aria-describedby on the fieldset.",
+    "relatedComponents": [
+      "checkboxes",
+      "form-group",
+      "error-summary"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form-group",
+        "reason": "Radio groups sit inside a fieldset within a form group carrying legend and error"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 262,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "fieldset + legend structure",
+      ".govuk-radios__item wrapper per option",
+      "Same name attribute on all radios in the group",
+      "aria-describedby on the fieldset for hints and errors"
+    ],
+    "editable": [
+      "Legend text",
+      "Option labels and values",
+      "Inline modifier for short options"
+    ],
+    "limitations": [
+      "Inline variant only for options with very short labels"
+    ],
+    "portableInvariants": [
+      "fieldset/legend for the group",
+      "Real <input type='radio'> elements sharing one name"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "radios/default.html",
+  "title": "Radios (default)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-radio__input",
+        "label": "usa-radio__label"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">Where do you live?</h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-england" name="where" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-england">England</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-scotland" name="where" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-scotland">Scotland</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-wales" name="where" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-wales">Wales</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="cap">radios default</div>
+</body>
+</html>

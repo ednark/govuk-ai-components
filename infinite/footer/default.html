@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System footer demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Footer (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "footer",
+    "govukClass": "govuk-footer",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "links",
+      "licence"
+    ],
+    "description": "GOV.UK footer with link sections and licence notice.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Every page — links to help, contact, privacy, and cookies"
+    ],
+    "avoidWhen": [
+      "Do not place primary navigation here"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit the link sections. Keep the OGL/licence notice for official services. Component lists and two-section layouts are supported via the same classes.",
+    "relatedComponents": [
+      "header"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 253,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "page-template"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "footer element with .govuk-footer",
+      "Licence notice structure for official use"
+    ],
+    "editable": [
+      "Section headings",
+      "Link lists",
+      "Meta text"
+    ],
+    "limitations": [
+      "Do not overload — the footer is for secondary links"
+    ],
+    "portableInvariants": [
+      "Footer landmark semantics"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "footer/default.html",
+  "title": "Footer (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<footer class="govuk-footer" role="contentinfo">
+  <div class="govuk-width-container">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Help</a></li>
+          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Cookies</a></li>
+          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Contact</a></li>
+          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Terms and conditions</a></li>
+        </ul>
+        <span class="govuk-footer__licence-description">All content is available under the <a class="govuk-footer__link" href="#">Open Government Licence v3.0</a>, except where otherwise stated</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="cap">footer default</div>
+</body>
+</html>

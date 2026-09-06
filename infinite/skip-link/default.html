@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System skip link demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skip link (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "skip-link",
+    "govukClass": "govuk-skip-link",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "skip",
+      "a11y",
+      "keyboard",
+      "navigation"
+    ],
+    "description": "Visually-hidden-until-focused skip link to main content.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Every page — first focusable element",
+      "Services with significant navigation before main content"
+    ],
+    "avoidWhen": [
+      "Never omit on accessible-service pages"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "The href must target the id of the <main> element. Keep the class — the link is visually hidden until keyboard-focused.",
+    "relatedComponents": [
+      "header",
+      "back-link"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 18,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "page-template"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      ".govuk-skip-link class (visually hidden until focus)",
+      "First focusable element position in body",
+      "Target id exists on the main content region"
+    ],
+    "editable": [
+      "Link text",
+      "Anchor target id"
+    ],
+    "limitations": [
+      "Must be the first element in body to be useful"
+    ],
+    "portableInvariants": [
+      "Anchor resolves to a real main-content id"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "skip-link/default.html",
+  "title": "Skip link (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<a class="govuk-skip-link" href="#main-content">Skip to main content</a>
+<div class="cap">skip-link default</div>
+</body>
+</html>

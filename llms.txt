@@ -1,0 +1,84 @@
+> GOV.UK AI Components — Plain-text agent protocol
+> Free to browse and download. Component markup and metadata are original works; GOV.UK class names used under the GOV.UK Design System's terms.
+> Home: https://github.com/ednark/govuk-ai-components
+> Base layer: https://github.com/ednark/ai-component-registry-spec (submodule at _base/)
+
+---
+
+## Overview
+
+GOV.UK Design System component registry for AI coding agents building UK government services. 41 self-contained component tiles across 29 component families (forms, navigation, feedback, data display, utilities) with categorized adaptation, coordination, and compliance metadata (PSBAR 2018, WCAG 2.2 AA, GDS Service Standard).
+
+## Machine manifest
+
+> https://raw.githubusercontent.com/ednark/govuk-ai-components/main/agents.json
+
+---
+
+## Quick start
+
+1. Filter vocab (tiny): GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/facets.json
+2. Discovery index (lean): GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/components.index.json
+3. Component source: GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/{file}
+4. Recipes (multi-component patterns): GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/recipes/index.json
+   GOV.UK patterns: ask-users-for-information, check-answers-flow, error-summary-flow,
+   task-list-pattern, page-template. When the task matches, fetch the recipe first.
+5. Version history: GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/versions.json
+
+---
+
+## Facets
+
+- gdsComponentType — button, text-input, checkboxes, radios, date-input, error-summary, notification-banner, accordion, etc.
+- section — forms, navigation, feedback, data-display, utilities
+- variant — component variant
+- interaction — passive, click, focus, keyboard, type, change
+- requiresJs — no, optional, required
+- govCompliance — PSBAR 2018, WCAG 2.2 AA, GDS Service Standard
+- a11y — wcag22AA, keyboardNav, screenReader, reducedMotion, forcedColors, ariaAttributes
+- costTier — cheap, moderate, expensive (composition cost: fetch size + JS behavior)
+- prerequisites — components to fetch first (e.g., form-group before inputs)
+- compositionRecipes — recipes this component participates in
+- piiHandling — accepts_input, displays_only, none
+- touchTargetSize — guaranteed mobile touch target (44px on interactive components)
+- supportedTokenProfiles — token profiles supported (highContrast)
+
+---
+
+## Decision strategy
+
+1. Filter by section (forms, navigation, feedback, data-display, utilities)
+2. Check requiresJs — prefer "no" unless the task needs JS behaviour
+3. Verify govCompliance includes PSBAR 2018 / WCAG 2.2 AA
+4. Check coordination.prerequisites — fetch form-group before inputs, place error-summary on failed validation
+5. Check relatedComponents for commonly paired components
+6. Only generate custom UI if no suitable component exists
+
+---
+
+## GOV.UK rules
+
+- One question per page; the question is the label and the h1
+- Every input sits inside a govuk-form-group
+- Every validation failure shows govuk-error-summary at the top, linked to field errors
+- Dates are three separate fields — never add a calendar
+- Hints and errors are wired via aria-describedby
+
+---
+
+## Component schema
+
+Each index record: id, file, gdsComponentType, govukClass, title, description, section, variant, variants, requiresJs, interaction, a11y, govCompliance, relatedComponents, costTier, prerequisites, incompatibleWith, compositionRecipes, piiHandling, touchTargetSize, supportedTokenProfiles.
+
+Adaptation prose (useWhen, avoidWhen, agentPrompt, constraints, portability.classMapping.uswds) is embedded in each tile's <script id="govuk-agent-meta"> block — fetch the tile.
+
+---
+
+## Output contract
+
+1. Reason — why this component over alternatives
+2. Selected components — file paths and titles
+3. GOV.UK classes needed — exact class names to apply
+4. Constraint verification — preserve elements intact
+5. Remaining work — what the component does not cover
+6. Recommended next — what to retrieve next

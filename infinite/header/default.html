@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System header demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Header (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "header",
+    "govukClass": "govuk-header",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "header",
+      "banner",
+      "logo",
+      "navigation"
+    ],
+    "description": "GOV.UK header with logotype, service name, and optional navigation.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Every page of a GOV.UK-style service",
+      "Service name + optional navigation"
+    ],
+    "avoidWhen": [
+      "Do not nest forms inside the header"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set the service name in govuk-header__link--service-name. Use the with-navigation variant for top-level links; the menu toggle requires govuk-frontend JS on mobile.",
+    "relatedComponents": [
+      "footer",
+      "skip-link",
+      "breadcrumbs"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 140,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "page-template"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "header[role='banner'] semantics via .govuk-header",
+      "Logotype link to homepage",
+      "data-module='govuk-header' for menu toggle behaviour"
+    ],
+    "editable": [
+      "Service name text",
+      "Navigation links",
+      "Container width classes"
+    ],
+    "limitations": [
+      "Custom colours need the blue variants — check contrast",
+      "Navigation collapses to a menu toggle below tablet width"
+    ],
+    "portableInvariants": [
+      "Header is the page banner landmark",
+      "Logotype links to the service start page"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "header/default.html",
+  "title": "Header (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<header class="govuk-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">GOV.UK</span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">Service name</a>
+    </div>
+  </div>
+</header>
+<div class="cap">header default</div>
+</body>
+</html>

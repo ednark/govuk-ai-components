@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System notification banner demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notification banner (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "notification-banner",
+    "govukClass": "govuk-notification-banner",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "banner",
+      "notification",
+      "success",
+      "alert"
+    ],
+    "description": "Page-level success and standard notification banners.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Page-level success or important information after an action",
+      "Telling users about something they need to know now"
+    ],
+    "avoidWhen": [
+      "Field-level errors — use error messages in the form group",
+      "Content the user can discover later"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use govuk-notification-banner--success for confirmations. Edit the title (role-region label) and heading. Keep role='region' + aria-labelledby wiring.",
+    "relatedComponents": [
+      "error-summary",
+      "panel",
+      "inset-text"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 106,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "role='region' + aria-labelledby pointing at the title",
+      "Success variant class for confirmations",
+      "data-module='govuk-notification-banner' for focus behaviour"
+    ],
+    "editable": [
+      "Title",
+      "Heading",
+      "Body HTML (lists allowed)"
+    ],
+    "limitations": [
+      "Do not stack multiple banners; one message per banner"
+    ],
+    "portableInvariants": [
+      "Region labelled via aria-labelledby"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "notification-banner/default.html",
+  "title": "Notification banner (default)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-alert",
+        "success": "usa-alert usa-alert--success",
+        "error": "usa-alert usa-alert--error"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-notification-banner" role="region" aria-labelledby="nb-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="nb-title">Important</h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">Your appointment has been moved to 12 March</p>
+  </div>
+</div>
+<div class="cap">notification-banner default</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "recipe": "error-summary-flow",
+  "title": "Validation Error State",
+  "description": "The failed-submission state: error summary at top, errored inputs with linked messages, resubmit button.",
+  "aliases": ["collection:error-summary-flow"],
+  "components": [
+    { "order": 1, "component": "error-summary", "variant": "default", "file": "error-summary/default.html", "role": "feedback", "required": true, "reason": "Focus target after failed submission; lists every error as an anchor link" },
+    { "order": 2, "component": "form-group", "variant": "error", "file": "form-group/error.html", "role": "root-container", "required": true, "reason": "The errored field's form group with linked govuk-error-message" },
+    { "order": 3, "component": "text-input", "variant": "default", "file": "text-input/default.html", "role": "input", "required": true, "reason": "Instantiate with govuk-input--error + aria-invalid='true' for each failing field" },
+    { "order": 4, "component": "button", "variant": "default", "file": "button/default.html", "role": "action", "required": true, "reason": "Resubmit action" }
+  ],
+  "nesting": "Component 1 above the form; component 3 inside component 2 (in error state); component 4 last",
+  "validationOrder": [
+    "Summary link text matches the field error wording exactly",
+    "Every failing field has aria-invalid='true' and aria-describedby pointing at its error id",
+    "Focus moves to the error summary"
+  ],
+  "a11yNotes": [
+    "role='alert' on the summary container",
+    "Never rely on colour alone",
+    "Error links anchor to real control ids"
+  ],
+  "agentPromptSequence": [
+    "1. Place the error summary as the first element in main",
+    "2. For each failing field, switch its form group to the error variant and add the error message",
+    "3. Keep the resubmit button unchanged"
+  ]
+}

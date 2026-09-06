@@ -1,0 +1,28 @@
+{
+  "recipe": "ask-users-for-information",
+  "title": "Ask Users for Information",
+  "description": "GOV.UK one-question-per-page form: error summary, labelled input with hint, and submit button.",
+  "aliases": ["collection:ask-users-for-information"],
+  "components": [
+    { "order": 1, "component": "error-summary", "variant": "default", "file": "error-summary/default.html", "role": "feedback", "required": false, "reason": "Rendered at the top only when validation fails; focus moves here" },
+    { "order": 2, "component": "form-group", "variant": "default", "file": "form-group/default.html", "role": "root-container", "reason": "Carries the question as label, the hint, and the error message — the prerequisite for every input" },
+    { "order": 3, "component": "text-input", "variant": "default", "file": "text-input/default.html", "role": "input", "required": true, "reason": "The answer field; instantiate inside the order-2 form group" },
+    { "order": 4, "component": "button", "variant": "default", "file": "button/default.html", "role": "action", "required": true, "reason": "Submit; the only primary button on the page" }
+  ],
+  "nesting": "Component 3 sits inside component 2 (label + hint + input); component 4 follows the form group; component 1 sits above everything when present",
+  "validationOrder": [
+    "Question text is in the label, not a separate heading",
+    "Every input is inside a govuk-form-group with a for/id-linked label",
+    "On failure: error-summary at top, govuk-form-group--error + govuk-error-message on the field, focus moves to the summary"
+  ],
+  "a11yNotes": [
+    "Hints are linked via aria-describedby",
+    "Error messages start with visually-hidden 'Error:'",
+    "One question per page keeps the h1 equal to the question"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the form group and place the question label, hint, and input inside it",
+    "2. Add the submit button after the form group",
+    "3. On validation failure, prepend the error summary and wire error links to input ids"
+  ]
+}

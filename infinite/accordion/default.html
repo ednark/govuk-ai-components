@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System accordion demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accordion (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "accordion",
+    "govukClass": "govuk-accordion",
+    "section": "utilities",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "accordion",
+      "sections",
+      "disclosure"
+    ],
+    "description": "Multi-section expandable accordion (govuk-frontend JS).",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Several related content sections users read selectively",
+      "Long FAQ-style content"
+    ],
+    "avoidWhen": [
+      "Single item — use details",
+      "Content users must read in full"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Each section is h2 > button > div. Keep heading structure and data-module hook — all open/close behaviour and aria-expanded is JS-managed.",
+    "relatedComponents": [
+      "details",
+      "tabs"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 248,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "Section headings as h2 with nested buttons",
+      "aria-expanded/aria-controls wiring (JS-owned)",
+      "data-module='govuk-accordion'"
+    ],
+    "editable": [
+      "Section titles",
+      "Section content"
+    ],
+    "limitations": [
+      "All content hidden until JS runs — needs a no-JS fallback consideration",
+      "Do not nest accordions"
+    ],
+    "portableInvariants": [
+      "Button-in-heading pattern for each section"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "accordion/default.html",
+  "title": "Accordion (default)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-accordion"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-accordion" data-module="govuk-accordion" id="acc-example">
+  <div class="govuk-accordion__section">
+    <h2 class="govuk-accordion__section-heading">
+      <button type="button" class="govuk-accordion__section-button" aria-expanded="true" aria-controls="acc-a">
+        Writing well for the web
+      </button>
+    </h2>
+    <div id="acc-a" class="govuk-accordion__section-content" aria-labelledby="acc-a-heading">
+      <p class="govuk-body">Write clearly using plain English.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <h2 class="govuk-accordion__section-heading">
+      <button type="button" class="govuk-accordion__section-button" aria-expanded="false" aria-controls="acc-b">
+        Writing well for specialists
+      </button>
+    </h2>
+    <div id="acc-b" class="govuk-accordion__section-content" aria-labelledby="acc-b-heading" hidden>
+      <p class="govuk-body">Use technical terms where precision matters.</p>
+    </div>
+  </div>
+</div>
+<div class="cap">accordion default</div>
+</body>
+</html>

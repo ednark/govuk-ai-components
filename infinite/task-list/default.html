@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System task list demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task list (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "task-list",
+    "govukClass": "govuk-task-list",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "task",
+      "steps",
+      "progress",
+      "multi-page"
+    ],
+    "description": "Task list with statuses for multi-step services.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Multi-step services where users complete sections in any order"
+    ],
+    "avoidWhen": [
+      "Strictly sequential steps — use step-by-step guidance instead"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Each task links to its section; status tags read Cannot start yet / Not started / In progress / Completed. Link only tasks that can start.",
+    "relatedComponents": [
+      "tag",
+      "phase-banner"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 249,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "task-list-pattern"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "Task name links to the section's first page",
+      "Status conveyed via tag text, not colour alone",
+      "govuk-task-list__item--with-link on linked items"
+    ],
+    "editable": [
+      "Task names",
+      "Statuses",
+      "hrefs"
+    ],
+    "limitations": [
+      "Statuses must be maintained server-side as the user progresses"
+    ],
+    "portableInvariants": [
+      "List semantics for tasks"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "task-list/default.html",
+  "title": "Task list (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#">Check eligibility</a>
+    </div>
+    <div class="govuk-task-list__status"><strong class="govuk-tag">Completed</strong></div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#">Complete applicant details</a>
+    </div>
+    <div class="govuk-task-list__status"><strong class="govuk-tag">In progress</strong></div>
+  </li>
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <h2 class="govuk-heading-m" style="margin:0;font-weight:400;font-size:1.1875em;">Upload documents</h2>
+    </div>
+    <div class="govuk-task-list__status"><strong class="govuk-tag govuk-tag--grey">Cannot start yet</strong></div>
+  </li>
+</ul>
+<div class="cap">task-list default</div>
+</body>
+</html>

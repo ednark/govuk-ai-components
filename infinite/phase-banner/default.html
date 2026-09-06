@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System phase banner demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase banner (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "phase-banner",
+    "govukClass": "govuk-phase-banner",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "alpha",
+      "beta",
+      "banner",
+      "feedback"
+    ],
+    "description": "Alpha/beta phase banner with feedback link.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Alpha and beta services (required by the Service Standard)",
+      "Feedback links during service assessment"
+    ],
+    "avoidWhen": [
+      "Live services"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Switch the tag text between Alpha and Beta, edit the description, and point the feedback link at your survey or email.",
+    "relatedComponents": [
+      "tag",
+      "header"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 79,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "task-list-pattern"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      ".govuk-phase-banner__content__tag for the phase tag"
+    ],
+    "editable": [
+      "Phase tag text",
+      "Description",
+      "Feedback link"
+    ],
+    "limitations": [
+      "Remove entirely when the service goes live"
+    ],
+    "portableInvariants": [
+      "Tag conveys the phase non-visually too"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "phase-banner/default.html",
+  "title": "Phase banner (default)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>
+    <span class="govuk-phase-banner__text">This is a new service — your <a class="govuk-link" href="#">feedback</a> will help us improve it.</span>
+  </p>
+</div>
+<div class="cap">phase-banner default</div>
+</body>
+</html>

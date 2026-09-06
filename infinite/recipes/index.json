@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "hand-authored (tools/build-registry.mjs consumes this)",
+  "spec": "Surface 4: Component Recipes (ai-component-registry-spec/protocol.md)",
+  "count": 5,
+  "urlPattern": "infinite/recipes/{recipe}.json",
+  "recipes": [
+    { "name": "ask-users-for-information", "title": "Ask Users for Information", "description": "One-question-per-page form with error summary", "componentCount": 4, "url": "infinite/recipes/ask-users-for-information.json" },
+    { "name": "check-answers-flow", "title": "Check Your Answers Flow", "description": "Pre-submission review with change links", "componentCount": 3, "url": "infinite/recipes/check-answers-flow.json" },
+    { "name": "error-summary-flow", "title": "Validation Error State", "description": "Failed-submission state with linked errors", "componentCount": 4, "url": "infinite/recipes/error-summary-flow.json" },
+    { "name": "task-list-pattern", "title": "Task List Pattern", "description": "Multi-step service hub with statuses", "componentCount": 3, "url": "infinite/recipes/task-list-pattern.json" },
+    { "name": "page-template", "title": "GOV.UK Page Template", "description": "Official page chrome in canonical DOM order", "componentCount": 4, "url": "infinite/recipes/page-template.json" }
+  ]
+}

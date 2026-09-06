@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System button demonstrating the disabled variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button (disabled)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "button",
+    "govukClass": "govuk-button",
+    "section": "forms",
+    "variant": "disabled",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "submit",
+      "action",
+      "cta"
+    ],
+    "description": "Primary, secondary, warning, and start-state buttons.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Primary action of a page (Submit, Save and continue)",
+      "Start page entry points (govuk-button--start)"
+    ],
+    "avoidWhen": [
+      "Links between pages — use govuk-link",
+      "Less important actions"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit the label. Use govuk-button--secondary for supporting actions, govuk-button--warning for destructive ones, govuk-button--disabled with disabled + aria-disabled for unavailable actions.",
+    "relatedComponents": [
+      "form-group",
+      "error-summary"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 30,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "ask-users-for-information",
+      "check-answers-flow",
+      "error-summary-flow"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      ".govuk-button class on a <button> element for form submission",
+      "type='submit' inside forms",
+      "disabled='disabled' + aria-disabled='true' for disabled buttons"
+    ],
+    "editable": [
+      "Label text",
+      "Variant class (secondary, warning, start, disabled)",
+      "Element type (button/a with button styling)"
+    ],
+    "limitations": [
+      "One primary button per view",
+      "Links styled as buttons must still be real <a> elements with button classes"
+    ],
+    "portableInvariants": [
+      "Semantic <button> or <a> root element",
+      "Accessible name preserved"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "button/disabled.html",
+  "title": "Button (disabled)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-button",
+        "secondary": "usa-button usa-button--secondary",
+        "warning": "usa-button usa-button--secondary"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<button class="govuk-button govuk-button--disabled" disabled="disabled" aria-disabled="true">Submit application</button>
+<div class="cap">button disabled</div>
+</body>
+</html>

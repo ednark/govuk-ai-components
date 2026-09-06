@@ -1,0 +1,29 @@
+{
+  "recipe": "page-template",
+  "title": "GOV.UK Page Template",
+  "description": "Official page chrome in canonical DOM order: skip link, header, breadcrumbs, content, footer.",
+  "aliases": ["collection:page-template"],
+  "components": [
+    { "order": 1, "component": "skip-link", "variant": "default", "file": "skip-link/default.html", "role": "a11y", "required": true, "reason": "First focusable element; targets the main content region" },
+    { "order": 2, "component": "header", "variant": "default", "file": "header/default.html", "role": "page-chrome", "required": true, "reason": "GOV.UK header with logotype and service name" },
+    { "order": 3, "component": "breadcrumbs", "variant": "default", "file": "breadcrumbs/default.html", "role": "navigation", "required": false, "reason": "Below header for pages deeper than two levels" },
+    { "order": 4, "component": "footer", "variant": "default", "file": "footer/default.html", "role": "page-chrome", "required": true, "reason": "Support links and licence notice; last element in body" }
+  ],
+  "nesting": "Canonical DOM order 1 → 2 → 3 → <main id='main-content'>…</main> → 4. Skip-link targets the main region",
+  "validationOrder": [
+    "Skip-link target id exists on <main>",
+    "Breadcrumbs' last item carries aria-current='page' and is not a link",
+    "One h1 per page inside main"
+  ],
+  "a11yNotes": [
+    "Never remove the skip link",
+    "Header is the banner landmark, footer the contentinfo landmark",
+    "Breadcrumb nav needs aria-label='Breadcrumb'"
+  ],
+  "agentPromptSequence": [
+    "1. Place the skip link as the first element in body",
+    "2. Add the header, then breadcrumbs if the page is deep",
+    "3. Wrap page content in <main id='main-content'>",
+    "4. Close with the footer"
+  ]
+}

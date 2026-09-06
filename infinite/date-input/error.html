@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System date input demonstrating the error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Date input (error)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "date-input",
+    "govukClass": "govuk-date-input",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "no",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "date",
+      "day",
+      "month",
+      "year",
+      "form"
+    ],
+    "description": "Three-field day/month/year date entry with group-level errors.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Known dates (date of birth, expiry dates) as three separate fields"
+    ],
+    "avoidWhen": [
+      "Users remembering a date to enter — allow memory aids in the question",
+      "Picking from a calendar — GOV.UK deliberately ships no calendar component"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit the legend and field names. For errors add govuk-form-group--error, a group-level govuk-error-message linked via fieldset aria-describedby, and govuk-input--error on failing fields.",
+    "relatedComponents": [
+      "form-group",
+      "error-summary"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form-group",
+        "reason": "Date inputs sit inside a form group carrying the legend and error message"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 399,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "Three separate inputs labelled Day, Month, Year",
+      "inputmode='numeric' and width classes (2/2/4)",
+      "Group-level error message linked from the fieldset",
+      "Autocomplete attributes (bday-day, bday-month, bday-year) where applicable"
+    ],
+    "editable": [
+      "Legend text",
+      "Field name prefixes"
+    ],
+    "limitations": [
+      "No calendar picker — this is a deliberate UX decision, do not add one",
+      "Validate day/month/year ranges server-side"
+    ],
+    "portableInvariants": [
+      "Three labelled numeric inputs",
+      "Group error linked via aria-describedby"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "date-input/error.html",
+  "title": "Date input (error)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-memorable-date",
+        "error": "usa-memorable-date usa-input--error"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-error-error">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">What is your date of birth?</h1>
+    </legend>
+    <p id="dob-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a date of birth
+    </p>
+    <div class="govuk-date-input" id="dob-err">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-err-day">Day</label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="dob-err-day" name="dob-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-err-month">Month</label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-err-month" name="dob-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-err-year">Year</label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-err-year" name="dob-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="cap">date-input error</div>
+</body>
+</html>

@@ -1,0 +1,2125 @@
+{
+  "schemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "generatedBy": "_base/generate-index.mjs",
+  "counts": {
+    "total": 41,
+    "bySection": {
+      "utilities": 2,
+      "navigation": 9,
+      "forms": 22,
+      "feedback": 4,
+      "data-display": 4
+    }
+  },
+  "components": [
+    {
+      "file": "accordion/default.html",
+      "title": "Accordion (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "accordion",
+      "govukClass": "govuk-accordion",
+      "section": "utilities",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "accordion",
+        "sections",
+        "disclosure"
+      ],
+      "description": "Multi-section expandable accordion (govuk-frontend JS).",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "details",
+        "tabs"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "back-link/default.html",
+      "title": "Back link (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "back-link",
+      "govukClass": "govuk-back-link",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "back",
+        "navigation",
+        "transaction"
+      ],
+      "description": "Styled back link for transactional question flows.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "skip-link",
+        "breadcrumbs"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "task-list-pattern"
+      ]
+    },
+    {
+      "file": "breadcrumbs/collapse-on-mobile.html",
+      "title": "Breadcrumbs (collapse-on-mobile)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "breadcrumbs",
+      "govukClass": "govuk-breadcrumbs",
+      "section": "navigation",
+      "variant": "collapse-on-mobile",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "breadcrumb",
+        "navigation",
+        "hierarchy"
+      ],
+      "description": "Hierarchical breadcrumb trail with mobile collapsing.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "back-link",
+        "header",
+        "phase-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "page-template"
+      ]
+    },
+    {
+      "file": "breadcrumbs/default.html",
+      "title": "Breadcrumbs (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "breadcrumbs",
+      "govukClass": "govuk-breadcrumbs",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "breadcrumb",
+        "navigation",
+        "hierarchy"
+      ],
+      "description": "Hierarchical breadcrumb trail with mobile collapsing.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "back-link",
+        "header",
+        "phase-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "page-template"
+      ]
+    },
+    {
+      "file": "button/default.html",
+      "title": "Button (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "button",
+      "govukClass": "govuk-button",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "button",
+        "submit",
+        "action",
+        "cta"
+      ],
+      "description": "Primary, secondary, warning, and start-state buttons.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "check-answers-flow",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "button/disabled.html",
+      "title": "Button (disabled)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "button",
+      "govukClass": "govuk-button",
+      "section": "forms",
+      "variant": "disabled",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "button",
+        "submit",
+        "action",
+        "cta"
+      ],
+      "description": "Primary, secondary, warning, and start-state buttons.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "check-answers-flow",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "button/start.html",
+      "title": "Button (start)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "button",
+      "govukClass": "govuk-button",
+      "section": "forms",
+      "variant": "start",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "button",
+        "submit",
+        "action",
+        "cta"
+      ],
+      "description": "Primary, secondary, warning, and start-state buttons.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "check-answers-flow",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "character-count/default.html",
+      "title": "Character count (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "character-count",
+      "govukClass": "govuk-character-count",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "character",
+        "count",
+        "limit",
+        "form",
+        "textarea"
+      ],
+      "description": "Textarea or input with a live character/word count.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "textarea"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "checkboxes/conditional.html",
+      "title": "Checkboxes (conditional)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "checkboxes",
+      "govukClass": "govuk-checkboxes",
+      "section": "forms",
+      "variant": "conditional",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "checkbox",
+        "multiple",
+        "form",
+        "options"
+      ],
+      "description": "Checkbox group with legend, error, and optional conditional reveals.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "radios",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "checkboxes/default.html",
+      "title": "Checkboxes (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "checkboxes",
+      "govukClass": "govuk-checkboxes",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "checkbox",
+        "multiple",
+        "form",
+        "options"
+      ],
+      "description": "Checkbox group with legend, error, and optional conditional reveals.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "radios",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "checkboxes/error.html",
+      "title": "Checkboxes (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "checkboxes",
+      "govukClass": "govuk-checkboxes",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "checkbox",
+        "multiple",
+        "form",
+        "options"
+      ],
+      "description": "Checkbox group with legend, error, and optional conditional reveals.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "radios",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "date-input/default.html",
+      "title": "Date input (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "date-input",
+      "govukClass": "govuk-date-input",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "date",
+        "day",
+        "month",
+        "year",
+        "form"
+      ],
+      "description": "Three-field day/month/year date entry with group-level errors.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "date-input/error.html",
+      "title": "Date input (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "date-input",
+      "govukClass": "govuk-date-input",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "date",
+        "day",
+        "month",
+        "year",
+        "form"
+      ],
+      "description": "Three-field day/month/year date entry with group-level errors.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "details/default.html",
+      "title": "Details (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "details",
+      "govukClass": "govuk-details",
+      "section": "utilities",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "details",
+        "disclosure",
+        "progressive",
+        "content"
+      ],
+      "description": "Native HTML details element styled for GOV.UK disclosure.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "inset-text",
+        "tabs",
+        "accordion"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "error-summary/default.html",
+      "title": "Error summary (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "error-summary",
+      "govukClass": "govuk-error-summary",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "error",
+        "validation",
+        "summary",
+        "form",
+        "a11y"
+      ],
+      "description": "Page-level validation summary with links to failing fields.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "text-input",
+        "button"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "file-upload/default.html",
+      "title": "File upload (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "file-upload",
+      "govukClass": "govuk-file-upload",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "file",
+        "upload",
+        "form",
+        "document"
+      ],
+      "description": "File upload control with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "file-upload/error.html",
+      "title": "File upload (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "file-upload",
+      "govukClass": "govuk-file-upload",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "no",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "file",
+        "upload",
+        "form",
+        "document"
+      ],
+      "description": "File upload control with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "footer/default.html",
+      "title": "Footer (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "footer",
+      "govukClass": "govuk-footer",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "footer",
+        "links",
+        "licence"
+      ],
+      "description": "GOV.UK footer with link sections and licence notice.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "header"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "page-template"
+      ]
+    },
+    {
+      "file": "form-group/default.html",
+      "title": "Form group (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "form-group",
+      "govukClass": "govuk-form-group",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "form",
+        "label",
+        "hint",
+        "error",
+        "wrapper"
+      ],
+      "description": "Container for a form control with its label, hint, and error message.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "text-input",
+        "error-summary",
+        "button"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "form-group/error.html",
+      "title": "Form group (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "form-group",
+      "govukClass": "govuk-form-group",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "no",
+      "interaction": [
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "form",
+        "label",
+        "hint",
+        "error",
+        "wrapper"
+      ],
+      "description": "Container for a form control with its label, hint, and error message.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "text-input",
+        "error-summary",
+        "button"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "header/default.html",
+      "title": "Header (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "header",
+      "govukClass": "govuk-header",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "click",
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "header",
+        "banner",
+        "logo",
+        "navigation"
+      ],
+      "description": "GOV.UK header with logotype, service name, and optional navigation.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "footer",
+        "skip-link",
+        "breadcrumbs"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate",
+      "compositionRecipes": [
+        "page-template"
+      ]
+    },
+    {
+      "file": "inset-text/default.html",
+      "title": "Inset text (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "inset-text",
+      "govukClass": "govuk-inset-text",
+      "section": "feedback",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": false,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "inset",
+        "emphasis",
+        "content"
+      ],
+      "description": "Emphasised key information with an inset left border.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "n/a",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "warning-callout",
+        "notification-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "check-answers-flow"
+      ]
+    },
+    {
+      "file": "notification-banner/default.html",
+      "title": "Notification banner (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "notification-banner",
+      "govukClass": "govuk-notification-banner",
+      "section": "feedback",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "banner",
+        "notification",
+        "success",
+        "alert"
+      ],
+      "description": "Page-level success and standard notification banners.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "error-summary",
+        "panel",
+        "inset-text"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "panel/default.html",
+      "title": "Panel (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "panel",
+      "govukClass": "govuk-panel",
+      "section": "feedback",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": false,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "confirmation",
+        "panel",
+        "reference"
+      ],
+      "description": "Confirmation panel for transaction completion.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "n/a",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "notification-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "phase-banner/default.html",
+      "title": "Phase banner (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "phase-banner",
+      "govukClass": "govuk-phase-banner",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "alpha",
+        "beta",
+        "banner",
+        "feedback"
+      ],
+      "description": "Alpha/beta phase banner with feedback link.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "tag",
+        "header"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "task-list-pattern"
+      ]
+    },
+    {
+      "file": "prev-next/default.html",
+      "title": "Pagination (prev/next) (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "prev-next",
+      "govukClass": "govuk-pagination",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "pagination",
+        "prev",
+        "next",
+        "navigation"
+      ],
+      "description": "Previous/next pagination for sequential content.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "back-link",
+        "table"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "radios/default.html",
+      "title": "Radios (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "radios",
+      "govukClass": "govuk-radios",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "radio",
+        "single-choice",
+        "form",
+        "options"
+      ],
+      "description": "Radio group for single-choice questions with error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "checkboxes",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "radios/error.html",
+      "title": "Radios (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "radios",
+      "govukClass": "govuk-radios",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "radio",
+        "single-choice",
+        "form",
+        "options"
+      ],
+      "description": "Radio group for single-choice questions with error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "checkboxes",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "radios/inline.html",
+      "title": "Radios (inline)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "radios",
+      "govukClass": "govuk-radios",
+      "section": "forms",
+      "variant": "inline",
+      "requiresJs": "optional",
+      "interaction": [
+        "focus",
+        "click",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "radio",
+        "single-choice",
+        "form",
+        "options"
+      ],
+      "description": "Radio group for single-choice questions with error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "checkboxes",
+        "form-group",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "select/default.html",
+      "title": "Select (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "select",
+      "govukClass": "govuk-select",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "focus",
+        "change"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "select",
+        "dropdown",
+        "form",
+        "options"
+      ],
+      "description": "Dropdown select with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary",
+        "radios"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "select/error.html",
+      "title": "Select (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "select",
+      "govukClass": "govuk-select",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "no",
+      "interaction": [
+        "focus",
+        "change"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "select",
+        "dropdown",
+        "form",
+        "options"
+      ],
+      "description": "Dropdown select with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary",
+        "radios"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "skip-link/default.html",
+      "title": "Skip link (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "skip-link",
+      "govukClass": "govuk-skip-link",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "skip",
+        "a11y",
+        "keyboard",
+        "navigation"
+      ],
+      "description": "Visually-hidden-until-focused skip link to main content.",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "header",
+        "back-link"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "page-template"
+      ]
+    },
+    {
+      "file": "summary-list/default.html",
+      "title": "Summary list (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "summary-list",
+      "govukClass": "govuk-summary-list",
+      "section": "data-display",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "summary",
+        "check-answers",
+        "key-value"
+      ],
+      "description": "Key/value summary list with optional change actions (check answers).",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "button",
+        "panel",
+        "error-summary"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "check-answers-flow"
+      ]
+    },
+    {
+      "file": "table/default.html",
+      "title": "Table (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "table",
+      "govukClass": "govuk-table",
+      "section": "data-display",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": false,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "table",
+        "data",
+        "numbers"
+      ],
+      "description": "Accessible data table with caption and numeric variants.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "n/a",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "summary-list",
+        "prev-next"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "tabs/default.html",
+      "title": "Tabs (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "tabs",
+      "govukClass": "govuk-tabs",
+      "section": "navigation",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "click",
+        "focus",
+        "keyboard"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "tabs",
+        "content",
+        "views"
+      ],
+      "description": "Accessible tabbed content sections (GOV.UK discourages overuse).",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "details",
+        "accordion"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "tag/default.html",
+      "title": "Tag (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "tag",
+      "govukClass": "govuk-tag",
+      "section": "data-display",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": false,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "tag",
+        "status",
+        "label"
+      ],
+      "description": "Status tags with semantic colour variants.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "n/a",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "task-list",
+        "summary-list",
+        "phase-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "task-list/default.html",
+      "title": "Task list (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "task-list",
+      "govukClass": "govuk-task-list",
+      "section": "data-display",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "task",
+        "steps",
+        "progress",
+        "multi-page"
+      ],
+      "description": "Task list with statuses for multi-step services.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "tag",
+        "phase-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "task-list-pattern"
+      ]
+    },
+    {
+      "file": "text-input/default.html",
+      "title": "Text input (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "text-input",
+      "govukClass": "govuk-input",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "input",
+        "text",
+        "form",
+        "field"
+      ],
+      "description": "Single-line text input with label, hint, and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "error-summary",
+        "character-count"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap",
+      "compositionRecipes": [
+        "ask-users-for-information",
+        "error-summary-flow"
+      ]
+    },
+    {
+      "file": "textarea/default.html",
+      "title": "Textarea (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "textarea",
+      "govukClass": "govuk-textarea",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "textarea",
+        "text",
+        "multiline",
+        "form"
+      ],
+      "description": "Multi-line text input with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "character-count",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "textarea/error.html",
+      "title": "Textarea (error)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "textarea",
+      "govukClass": "govuk-textarea",
+      "section": "forms",
+      "variant": "error",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "textarea",
+        "text",
+        "multiline",
+        "form"
+      ],
+      "description": "Multi-line text input with label and error support.",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "form-group",
+        "character-count",
+        "error-summary"
+      ],
+      "prerequisites": [
+        "form-group"
+      ],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "warning-callout/default.html",
+      "title": "Warning callout (default)",
+      "_schemaVersion": 2,
+      "gdsComponentType": "warning-callout",
+      "govukClass": "govuk-warning-callout",
+      "section": "feedback",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [],
+      "a11y": {
+        "wcag22AA": true,
+        "keyboardNav": false,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "PSBAR 2018",
+        "WCAG 2.2 AA",
+        "GDS Service Standard"
+      ],
+      "tier": "curated",
+      "tags": [
+        "warning",
+        "callout",
+        "critical"
+      ],
+      "description": "High-visibility warning callout for critical information.",
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "n/a",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
+      "relatedComponents": [
+        "inset-text",
+        "notification-banner"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "generatedBy": "_base/generate-index.mjs",
+  "total": 41,
+  "designSystem": "GOV.UK Design System 5.x",
+  "facets": {
+    "gdsComponentType": {
+      "accordion": 1,
+      "back-link": 1,
+      "breadcrumbs": 2,
+      "button": 3,
+      "character-count": 1,
+      "checkboxes": 3,
+      "date-input": 2,
+      "details": 1,
+      "error-summary": 1,
+      "file-upload": 2,
+      "footer": 1,
+      "form-group": 2,
+      "header": 1,
+      "inset-text": 1,
+      "notification-banner": 1,
+      "panel": 1,
+      "phase-banner": 1,
+      "prev-next": 1,
+      "radios": 3,
+      "select": 2,
+      "skip-link": 1,
+      "summary-list": 1,
+      "table": 1,
+      "tabs": 1,
+      "tag": 1,
+      "task-list": 1,
+      "text-input": 1,
+      "textarea": 2,
+      "warning-callout": 1
+    },
+    "section": {
+      "utilities": 2,
+      "navigation": 9,
+      "forms": 22,
+      "feedback": 4,
+      "data-display": 4
+    },
+    "variant": {
+      "default": 29,
+      "collapse-on-mobile": 1,
+      "disabled": 1,
+      "start": 1,
+      "conditional": 1,
+      "error": 7,
+      "inline": 1
+    },
+    "requiresJs": {
+      "required": 3,
+      "no": 23,
+      "optional": 15
+    },
+    "interaction": {
+      "click": 24,
+      "keyboard": 16,
+      "focus": 32,
+      "type": 6,
+      "change": 2
+    },
+    "a11y": {
+      "wcag22AA": 41,
+      "keyboardNav": 36,
+      "screenReader": 41,
+      "reducedMotion": 41,
+      "forcedColors": 41,
+      "ariaAttributes": 41
+    },
+    "govCompliance": {
+      "PSBAR 2018": 41,
+      "WCAG 2.2 AA": 41,
+      "GDS Service Standard": 41
+    },
+    "costTier": {
+      "moderate": 18,
+      "cheap": 23
+    },
+    "prerequisites": {
+      "form-group": 16
+    },
+    "compositionRecipes": {
+      "task-list-pattern": 3,
+      "page-template": 5,
+      "ask-users-for-information": 7,
+      "check-answers-flow": 5,
+      "error-summary-flow": 7
+    },
+    "piiHandling": {
+      "displays_only": 18,
+      "none": 6,
+      "accepts_input": 17
+    },
+    "touchTargetSize": {
+      "44px": 36,
+      "n/a": 5
+    },
+    "supportedTokenProfiles": {
+      "highContrast": 41
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "recipe": "check-answers-flow",
+  "title": "Check Your Answers Flow",
+  "description": "Pre-submission review page: summary list of answers with Change links, key information inset, and submit button.",
+  "aliases": ["collection:check-answers-flow"],
+  "components": [
+    { "order": 1, "component": "summary-list", "variant": "default", "file": "summary-list/default.html", "role": "data-display", "required": true, "reason": "Each answer with a visually-labelled Change link pointing at its question page" },
+    { "order": 2, "component": "inset-text", "variant": "default", "file": "inset-text/default.html", "role": "feedback", "required": false, "reason": "Warning that submitting is final, or key deadline information" },
+    { "order": 3, "component": "button", "variant": "default", "file": "button/default.html", "role": "action", "required": true, "reason": "'Accept and send' — the transaction's final action" }
+  ],
+  "nesting": "Component 1 is the page body; component 2 sits above it; component 3 sits below the list",
+  "validationOrder": [
+    "Every row has a Change link stating what it changes (visually-hidden suffix)",
+    "h1 is 'Check your answers'",
+    "The submit button wording reflects finality ('Accept and send')"
+  ],
+  "a11yNotes": [
+    "Change links must include visually-hidden context ('Change name')",
+    "Do not remove the summary-list dl semantics"
+  ],
+  "agentPromptSequence": [
+    "1. Build one summary-list row per answered question",
+    "2. Add the finality inset above the list",
+    "3. Close with the accept-and-send button"
+  ]
+}

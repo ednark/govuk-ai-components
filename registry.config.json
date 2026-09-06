@@ -1,0 +1,75 @@
+{
+  "name": "govuk-ai-components",
+  "description": "GOV.UK Design System component registry for AI coding agents. Self-contained, accessible government components with full adaptation and coordination metadata.",
+  "repo": "https://github.com/ednark/govuk-ai-components",
+  "base": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main",
+  "agentMetaId": "govuk-agent-meta",
+  "tileDir": "infinite",
+  "count": 41,
+  "facetsUrl": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/facets.json",
+  "index": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/components.index.json",
+  "indexSchemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "tileFetchPattern": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/{file}",
+  "designSystem": {
+    "name": "GOV.UK Design System",
+    "version": "5.x",
+    "url": "https://design-system.service.gov.uk"
+  },
+  "facets": [
+    "gdsComponentType",
+    "section",
+    "variant",
+    "requiresJs",
+    "interaction",
+    "a11y",
+    "govCompliance",
+    "costTier",
+    "prerequisites",
+    "compositionRecipes",
+    "piiHandling",
+    "touchTargetSize",
+    "supportedTokenProfiles"
+  ],
+  "metadataCategories": {
+    "discovery": "Facets for filtering in code (not sent to model)",
+    "selection": "useWhen/avoidWhen — helps choose the right component",
+    "instruction": "agentPrompt — direct guidance for adaptation",
+    "coordination": "prerequisites/incompatibleWith/compositionCost/agentPromptSequence — plan before composing",
+    "constraints": "preserve/editable/limitations/portableInvariants — hard boundaries on changes",
+    "portability": "classMapping for cross-registry class substitution"
+  },
+  "constraintPriority": [
+    "constraints.preserve (never modify)",
+    "constraints.limitations (respect)",
+    "instruction.agentPrompt (adapt within boundaries)",
+    "constraints.editable (prefer)"
+  ],
+  "mcp": {
+    "enabled": true,
+    "server": "_base/mcp/server.mjs",
+    "transport": "stdio",
+    "tools": [
+      "search_components",
+      "get_component",
+      "list_facets",
+      "get_index",
+      "get_adapter",
+      "translate_component",
+      "get_recipe",
+      "query_compliance",
+      "get_versions"
+    ]
+  },
+  "tokenProfiles": {
+    "highContrast": {
+      "description": "forced-colors / high-contrast mode support",
+      "tokenOverrides": {
+        "border": "3px solid currentColor",
+        "background": "transparent"
+      }
+    }
+  },
+  "compatibilityPath": "compatibility.json",
+  "updated": "0.1.0"
+}

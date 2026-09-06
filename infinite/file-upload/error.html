@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System file upload demonstrating the error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>File upload (error)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "file-upload",
+    "govukClass": "govuk-file-upload",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "file",
+      "upload",
+      "form",
+      "document"
+    ],
+    "description": "File upload control with label and error support.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Uploading documents (evidence, certificates, photos)"
+    ],
+    "avoidWhen": [
+      "Users may not have the file ready — allow 'save and come back'"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit the label. For errors add govuk-file-upload--error, govuk-form-group--error, a linked govuk-error-message, and aria-invalid='true'. State accepted formats and size limits in the hint.",
+    "relatedComponents": [
+      "form-group",
+      "error-summary"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form-group",
+        "reason": "File uploads sit inside a form group carrying the label and error message"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 115,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      ".govuk-file-upload class",
+      "Label 'for' association",
+      "accept attribute for file formats"
+    ],
+    "editable": [
+      "Label text",
+      "Hint text (accepted formats, max size)",
+      "accept attribute"
+    ],
+    "limitations": [
+      "Native control — appearance varies by platform",
+      "Large files need progress feedback server-side"
+    ],
+    "portableInvariants": [
+      "Semantic <input type='file'>",
+      "Label association via for/id"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "file-upload/error.html",
+  "title": "File upload (error)"
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="file-error">
+    Upload a photo
+  </label>
+  <p id="file-error-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 10MB
+  </p>
+  <input class="govuk-file-upload govuk-file-upload--error" id="file-error" name="photo" type="file" aria-describedby="file-error-error" aria-invalid="true">
+</div>
+<div class="cap">file-upload error</div>
+</body>
+</html>

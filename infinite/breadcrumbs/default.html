@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="GOV.UK Design System breadcrumbs demonstrating the default variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breadcrumbs (default)</title>
+<script type="application/json" id="govuk-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "gdsComponentType": "breadcrumbs",
+    "govukClass": "govuk-breadcrumbs",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag22AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "PSBAR 2018",
+      "WCAG 2.2 AA",
+      "GDS Service Standard"
+    ],
+    "tier": "curated",
+    "tags": [
+      "breadcrumb",
+      "navigation",
+      "hierarchy"
+    ],
+    "description": "Hierarchical breadcrumb trail with mobile collapsing.",
+    "compliance": {
+      "nistControls": [],
+      "psbar": true,
+      "wcag22AA": true,
+      "serviceStandard": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Sites more than two levels deep",
+      "Helping users trace their path back up a hierarchy"
+    ],
+    "avoidWhen": [
+      "Top-level pages",
+      "One-page services"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Edit the trail links. govuk-breadcrumbs--collapse-on-mobile hides middle levels on small screens. The last item is the current page — keep it as plain text (not a link) with aria-current='page'.",
+    "relatedComponents": [
+      "back-link",
+      "header",
+      "phase-banner"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 128,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "compositionRecipes": [
+      "page-template"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "nav with aria-label='Breadcrumb'",
+      "Ordered list structure",
+      "aria-current='page' on the last item"
+    ],
+    "editable": [
+      "Trail link text and hrefs"
+    ],
+    "limitations": [
+      "Do not use instead of the back-link within a transaction"
+    ],
+    "portableInvariants": [
+      "nav[aria-label='Breadcrumb']",
+      "ol semantics"
+    ]
+  },
+  "supportedTokenProfiles": [
+    "highContrast"
+  ],
+  "file": "breadcrumbs/default.html",
+  "title": "Breadcrumbs (default)",
+  "portability": {
+    "classMapping": {
+      "uswds": {
+        "base": "usa-breadcrumb"
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
+a.govuk-link{color:#1d70b8}
+.govuk-body{margin:0 0 20px}
+.cap{position:fixed;bottom:12px;left:16px;font-size:11px;letter-spacing:.08em;color:#505a5f;text-transform:uppercase}
+.govuk-visually-hidden{position:absolute!important;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid #fd0;box-shadow:0 0 0 3px #0b0c0c;outline-offset:0}
+.govuk-hint{color:#505a5f;margin:4px 0 0}
+.govuk-error-message{color:#d4351c;font-weight:700;margin:8px 0 0}
+.govuk-label{font-weight:400;display:block;margin-bottom:4px}
+.govuk-label-wrapper h1{margin:0}
+.govuk-fieldset{border:0;padding:0;margin:0 0 20px}
+.govuk-fieldset__legend{font-weight:700;margin:0 0 10px;padding:0}
+.govuk-fieldset__heading{font-size:1.375rem;margin:0}
+
+
+</style>
+</head>
+<body>
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Home</a></li>
+    <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Section</a></li>
+    <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Sub-section</a></li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Current page</li>
+  </ol>
+</nav>
+<div class="cap">breadcrumbs default</div>
+</body>
+</html>

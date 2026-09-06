@@ -1,0 +1,26 @@
+{
+  "recipe": "task-list-pattern",
+  "title": "Task List Pattern",
+  "description": "Multi-step service hub: phase banner, task list with statuses, and back navigation.",
+  "aliases": ["collection:task-list-pattern"],
+  "components": [
+    { "order": 1, "component": "phase-banner", "variant": "default", "file": "phase-banner/default.html", "role": "navigation", "required": true, "reason": "Required while the service is in alpha/beta per the Service Standard" },
+    { "order": 2, "component": "back-link", "variant": "default", "file": "back-link/default.html", "role": "navigation", "required": false, "reason": "Return to the service start page" },
+    { "order": 3, "component": "task-list", "variant": "default", "file": "task-list/default.html", "role": "data-display", "required": true, "reason": "Sections with statuses; only startable tasks link" }
+  ],
+  "nesting": "Canonical DOM order 1 → 2 → 3 below the h1 ('Your application')",
+  "validationOrder": [
+    "Statuses maintained server-side as tasks complete",
+    "Only tasks that can start are links",
+    "Status conveyed by tag text, never colour alone"
+  ],
+  "a11yNotes": [
+    "Task link text is the task name — statuses are separate elements",
+    "Phase tag text must be readable by screen readers"
+  ],
+  "agentPromptSequence": [
+    "1. Place the phase banner above the page content",
+    "2. Add the back link under the h1",
+    "3. Render the task list with server-derived statuses"
+  ]
+}
