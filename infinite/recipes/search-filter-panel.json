@@ -1,0 +1,30 @@
+{
+  "recipe": "search-filter-panel",
+  "title": "Search filter panel",
+  "description": "The gov.uk/search/all pattern: filter sidebar with date fields, topic checkbox tree, and apply button beside a results column. Observed live on GOV.UK.",
+  "aliases": ["collection:search-filter-panel"],
+  "provenance": { "observed": "2026-09-06", "source": "https://www.gov.uk/search/all", "method": "live-site observation" },
+  "components": [
+    { "order": 1, "component": "checkboxes", "variant": "default", "file": "checkboxes/default.html", "role": "input", "required": true, "reason": "Topic/type facet checkboxes (instantiate one group per facet)" },
+    { "order": 2, "component": "text-input", "variant": "default", "file": "text-input/default.html", "role": "input", "required": false, "reason": "Date-from/date-to filter fields" },
+    { "order": 3, "component": "button", "variant": "default", "file": "button/default.html", "role": "action", "required": true, "reason": "Apply filters" },
+    { "order": 4, "component": "search-result-item", "variant": "with-sub-results", "file": "search-result-item/with-sub-results.html", "role": "data-display", "required": false, "reason": "Filtered results column (publishing-frontend component)" }
+  ],
+  "nesting": "Two-column layout: filter panel (components 1-3) beside the results column (component 4, one per result)",
+  "validationOrder": [
+    "Every filter checkbox has a for/id-linked label",
+    "Selected filters are reflected as removable tags or selected checkboxes on results pages",
+    "Result count stated in text"
+  ],
+  "a11yNotes": [
+    "Group facet checkboxes in fieldset+legend per facet",
+    "Date fields keep their visual labels",
+    "Results updates announced via a polite live region"
+  ],
+  "agentPromptSequence": [
+    "1. Build the filter panel: one checkbox group per facet, date inputs for range filters",
+    "2. Add the apply button at the panel bottom",
+    "3. Render the results column with search-result-item per hit",
+    "4. State the result count before the results"
+  ]
+}

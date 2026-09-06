@@ -146,26 +146,7 @@ const CSS = {
 .govuk-character-count__message.govuk-hint{font-size:1rem}
 .govuk-table__caption{font-weight:700;text-align:left;margin-bottom:8px}
 `
-};
-
-
-// ─── Cost model (same calibration as the USWDS registry) ────────────────────
-
-function costDefaults(bytes, requiresJs) {
-  const estimatedTokens = Math.ceil(bytes / 4);
-  let costTier;
-  if (requiresJs === 'required') costTier = estimatedTokens > 2000 ? 'expensive' : 'moderate';
-  else if (requiresJs === 'optional') costTier = 'moderate';
-  else costTier = estimatedTokens > 1000 ? 'moderate' : 'cheap';
-  const renderingTimeMs = requiresJs === 'required' ? 60 : requiresJs === 'optional' ? 35 : 15;
-  const recommendedModel = costTier === 'expensive' ? 'sonnet' : 'haiku';
-  return { costTier, estimatedTokens, renderingTimeMs, recommendedModel };
-}
-
-// ─── Recipe membership ───────────────────────────────────────────────────────
-
-const recipeMembership = {
-  'step-by-step-navigation': `.app-step-nav{border-left:2px solid #1d70b8;margin:1.5rem 0;padding-left:1rem}
+,'step-by-step-navigation': `.app-step-nav{border-left:2px solid #1d70b8;margin:1.5rem 0;padding-left:1rem}
 .app-step-nav__steps{list-style:none;margin:0;padding:0}
 .app-step-nav__step{margin-bottom:1rem}
 .app-step-nav__heading{margin:0}
@@ -184,6 +165,24 @@ const recipeMembership = {
 .gem-c-search-result__sub-result-description{font-size:.875rem;color:#505a5f;margin:.1rem 0 .5rem}
 `
 };
+
+
+// ─── Cost model (same calibration as the USWDS registry) ────────────────────
+
+function costDefaults(bytes, requiresJs) {
+  const estimatedTokens = Math.ceil(bytes / 4);
+  let costTier;
+  if (requiresJs === 'required') costTier = estimatedTokens > 2000 ? 'expensive' : 'moderate';
+  else if (requiresJs === 'optional') costTier = 'moderate';
+  else costTier = estimatedTokens > 1000 ? 'moderate' : 'cheap';
+  const renderingTimeMs = requiresJs === 'required' ? 60 : requiresJs === 'optional' ? 35 : 15;
+  const recommendedModel = costTier === 'expensive' ? 'sonnet' : 'haiku';
+  return { costTier, estimatedTokens, renderingTimeMs, recommendedModel };
+}
+
+// ─── Recipe membership ───────────────────────────────────────────────────────
+
+const recipeMembership = {};
 
 try {
   const recipesDir = join(TILE_DIR, 'recipes');
