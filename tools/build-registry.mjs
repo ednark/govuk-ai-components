@@ -164,7 +164,27 @@ function costDefaults(bytes, requiresJs) {
 
 // ─── Recipe membership ───────────────────────────────────────────────────────
 
-const recipeMembership = {};
+const recipeMembership = {
+  'step-by-step-navigation': `.app-step-nav{border-left:2px solid #1d70b8;margin:1.5rem 0;padding-left:1rem}
+.app-step-nav__steps{list-style:none;margin:0;padding:0}
+.app-step-nav__step{margin-bottom:1rem}
+.app-step-nav__heading{margin:0}
+.app-step-nav__circle{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:#1d70b8;color:#fff;margin-right:.75rem}
+.app-step-nav__circle-background{font-weight:700}
+.app-step-nav__step--done .app-step-nav__circle{background:#00703c}
+.app-step-nav__body{margin:.5rem 0 0;color:#505a5f}
+`,
+  'search-result-item': `.gem-c-search-result{margin:1.25rem 0;max-width:38rem}
+.gem-c-search-result__title{font-size:1.25rem;margin:0 0 .25rem}
+.gem-c-search-result__title-link{color:#1d70b8;text-decoration:underline}
+.gem-c-search-result__description{margin:0 0 .25rem}
+.gem-c-search-result__metadata{font-size:.875rem;color:#505a5f;margin:0}
+.gem-c-search-result__sub-results{list-style:none;margin:.75rem 0 0;padding-left:1.25rem;border-left:2px solid #b1b4b6}
+.gem-c-search-result__sub-result-link{color:#1d70b8;text-decoration:underline}
+.gem-c-search-result__sub-result-description{font-size:.875rem;color:#505a5f;margin:.1rem 0 .5rem}
+`
+};
+
 try {
   const recipesDir = join(TILE_DIR, 'recipes');
   for (const item of readdirSync(recipesDir)) {
@@ -248,6 +268,7 @@ function buildMeta(component, variant, relPath, html) {
       portableInvariants: component.invariants,
     },
     supportedTokenProfiles: ['highContrast'],
+    ...(component.provenance && { provenance: component.provenance }),
     file: relPath,
     title: `${component.name} (${variant})`,
   };

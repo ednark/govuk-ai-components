@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "registry": "govuk-ai-components",
+  "note": "Session log of field research. Per-tile provenance lives in each tile's provenance block.",
+  "sessions": [
+    {
+      "date": "2026-09-06",
+      "source": "https://www.gov.uk/search/all",
+      "title": "GOV.UK search results (live-site observation)",
+      "method": "live-site observation",
+      "findings": [
+        "Search result items with nested sub-results and \"Updated:\" dates — gem-c-search-result (govuk-publishing-frontend) — added as search-result-item/*",
+        "Filter and sort panel (date fields + topic checkbox tree + type checkboxes) — composition of existing components; documented as the search-filter-panel recipe",
+        "Step-by-step navigation — app-step-nav (govuk-publishing-frontend) — added as step-by-step-navigation/*",
+        "\"Is this page useful?\" feedback widget — content pattern, not an official component; recipe candidate",
+        "Featured-link interventions (e.g. Universal Credit sign-in at top of results) — content pattern; recipe candidate"
+      ],
+      "tilesAdded": [
+        "step-by-step-navigation/default",
+        "step-by-step-navigation/with-completed-steps",
+        "search-result-item/default",
+        "search-result-item/with-sub-results"
+      ]
+    }
+  ]
+}

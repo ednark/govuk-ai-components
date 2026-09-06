@@ -1,10 +1,8 @@
 {
   "name": "govuk-ai-components",
-  "description": "GOV.UK Design System component registry for AI coding agents. Self-contained, accessible government components with full adaptation and coordination metadata.",
+  "description": "GOV.UK Design System component registry for AI coding agents. Self-contained, accessible UK government components with full adaptation and coordination metadata.",
   "repo": "https://github.com/ednark/govuk-ai-components",
   "base": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main",
-  "agentMetaId": "govuk-agent-meta",
-  "tileDir": "infinite",
   "count": 45,
   "facetsUrl": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/facets.json",
   "index": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/components.index.json",
@@ -16,6 +14,8 @@
     "version": "5.x",
     "url": "https://design-system.service.gov.uk"
   },
+  "agentMetaId": "govuk-agent-meta",
+  "tileDir": "infinite",
   "facets": [
     "gdsComponentType",
     "section",
@@ -31,20 +31,19 @@
     "touchTargetSize",
     "supportedTokenProfiles"
   ],
-  "metadataCategories": {
-    "discovery": "Facets for filtering in code (not sent to model)",
-    "selection": "useWhen/avoidWhen — helps choose the right component",
-    "instruction": "agentPrompt — direct guidance for adaptation",
-    "coordination": "prerequisites/incompatibleWith/compositionCost/agentPromptSequence — plan before composing",
-    "constraints": "preserve/editable/limitations/portableInvariants — hard boundaries on changes",
-    "portability": "classMapping for cross-registry class substitution"
-  },
-  "constraintPriority": [
-    "constraints.preserve (never modify)",
-    "constraints.limitations (respect)",
-    "instruction.agentPrompt (adapt within boundaries)",
-    "constraints.editable (prefer)"
+  "adaptationDetail": "embedded in each tile as <script type=\"application/json\" id=\"govuk-agent-meta\">",
+  "flow": [
+    "GET agents.json",
+    "GET facets.json",
+    "GET components.index.json",
+    "filter by facet in code",
+    "GET tile by file",
+    "read govuk-agent-meta block"
   ],
+  "recipesUrl": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/recipes/index.json",
+  "versionsUrl": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/versions.json",
+  "compatibilityUrl": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/compatibility.json",
+  "compatibilityTargets": ["uswds", "dsfr", "ecl"],
   "mcp": {
     "enabled": true,
     "server": "_base/mcp/server.mjs",
@@ -64,10 +63,7 @@
   "tokenProfiles": {
     "highContrast": {
       "description": "forced-colors / high-contrast mode support",
-      "tokenOverrides": {
-        "border": "3px solid currentColor",
-        "background": "transparent"
-      }
+      "tokenOverrides": { "border": "3px solid currentColor", "background": "transparent" }
     }
   },
   "compatibilityPath": "compatibility.json",

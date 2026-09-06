@@ -12,6 +12,17 @@
       "addedFacets": ["gdsComponentType", "section", "variant", "requiresJs", "interaction", "a11y", "govCompliance", "costTier", "prerequisites", "compositionRecipes", "piiHandling", "touchTargetSize", "supportedTokenProfiles"],
       "migrationPath": "Initial release.",
       "notes": "29 GOV.UK component families across forms/navigation/feedback/data-display/utilities; 5 pattern recipes; govuk→uswds compatibility map"
+    },
+    {
+      "version": "0.2.0",
+      "releaseDate": "2026-09-06",
+      "componentCount": 45,
+      "breakingChanges": [],
+      "addedCategories": ["provenance"],
+      "addedFacets": [],
+      "metadataChanges": ["provenance block on field-observed tiles; publishing-frontend components flagged in discovery/limitations"],
+      "migrationPath": "Fully additive.",
+      "notes": "Field-research pass (gov.uk/search/all): step-by-step-navigation (2) and search-result-item (2) added from govuk-publishing-frontend, source-flagged; provenance.json session log added"
     }
   ],
   "designSystemVersions": [
