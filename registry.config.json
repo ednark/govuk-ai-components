@@ -76,5 +76,19 @@
   "contentLanguages": [
     "en",
     "cy (footer link)"
+  ],
+  "gaps": [
+    {
+      "concept": "card",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "task-list / summary-list / heading+link patterns",
+      "reason": "GOV.UK Design System deliberately ships no card component — flatten content to GOV.UK patterns"
+    },
+    {
+      "concept": "combobox",
+      "status": "deferred",
+      "nearestAlternative": "select",
+      "reason": "GOV.UK advises simple selects in transactional services; autocomplete patterns are service-specific"
+    }
   ]
 }

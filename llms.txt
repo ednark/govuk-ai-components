@@ -47,6 +47,8 @@ GOV.UK Design System component registry for AI coding agents building UK governm
 
 ## Decision strategy
 
+- GOV.UK deliberately ships no card component — use task-list, summary-list, or heading+link patterns instead of inventing one
+
 1. Filter by section (forms, navigation, feedback, data-display, utilities)
 2. Check requiresJs — prefer "no" unless the task needs JS behaviour
 3. Verify govCompliance includes PSBAR 2018 / WCAG 2.2 AA

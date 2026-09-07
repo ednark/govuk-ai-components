@@ -30,6 +30,8 @@ A structured component knowledge base for AI coding agents building UK governmen
 
 ## GOV.UK-Specific Rules
 
+- **GOV.UK deliberately ships no card component** — do not invent one. For content that other systems render as cards, use task-list, summary-list, or heading+link patterns (see the declared gap in registry.config.json)
+
 - Every input sits inside a `govuk-form-group` — fetch `form-group` first (see `coordination.prerequisiteComponents`)
 - Every validation-failure state includes `error-summary` at the top of the page
 - One question per page; the question text is the label and the h1
