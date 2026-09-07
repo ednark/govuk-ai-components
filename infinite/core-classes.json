@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "registry": "govuk-ai-components",
+  "description": "Real, documented design-system classes that are NOT tiled components — the untiled core layer for page assembly. Consumed by cross-registry coverage checking.",
+  "categories": {
+    "layout": [
+      "govuk-width-container",
+      "govuk-main-wrapper",
+      "govuk-grid-row",
+      "govuk-grid-column"
+    ],
+    "typography": [
+      "govuk-body",
+      "govuk-heading-xl",
+      "govuk-heading-l",
+      "govuk-heading-m",
+      "govuk-list",
+      "govuk-visually-hidden"
+    ],
+    "elements": [
+      "govuk-link",
+      "govuk-cookie-banner",
+      "govuk-cookie-banner__message",
+      "govuk-feedback",
+      "govuk-button--secondary"
+    ],
+    "states": []
+  }
+}

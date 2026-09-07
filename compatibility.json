@@ -1,75 +1,201 @@
 {
   "schemaVersion": 1,
-  "source": { "designSystem": "GOV.UK Design System", "version": "5.x", "registry": "govuk-ai-components" },
+  "source": {
+    "designSystem": "GOV.UK Design System",
+    "version": "5.x",
+    "registry": "govuk-ai-components"
+  },
   "_scope": "Family-level hints for translating GOV.UK components to the USWDS registry (github.com/ednark/uswds-ai-components). The MCP translate_component tool prefers tile classMapping, then these maps. structural entries are advisory only.",
   "govuk-to-uswds": {
-    "target": { "designSystem": "U.S. Web Design System", "version": "3.13.0", "registry": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main" },
+    "target": {
+      "designSystem": "U.S. Web Design System",
+      "version": "3.13.0",
+      "registry": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main"
+    },
     "button": {
-      "target_component": "button", "adaptation": "css-only",
-      "classMap": { "govuk-button": "usa-button", "govuk-button--secondary": "usa-button usa-button--secondary", "govuk-button--warning": "usa-button usa-button--secondary", "govuk-button--disabled": "usa-button" },
-      "mismatches": ["USWDS has no start-button equivalent", "USWDS disabled uses disabled='disabled' without the --disabled class"],
+      "target_component": "button",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-button": "usa-button",
+        "govuk-button--secondary": "usa-button usa-button--secondary",
+        "govuk-button--warning": "usa-button usa-button--secondary",
+        "govuk-button--disabled": "usa-button"
+      },
+      "mismatches": [
+        "USWDS has no start-button equivalent",
+        "USWDS disabled uses disabled='disabled' without the --disabled class"
+      ],
       "notes": "Same <button> semantics; sentence case in both"
     },
     "text-input": {
-      "target_component": "text-input", "adaptation": "css-only",
-      "classMap": { "govuk-input": "usa-input", "govuk-input--error": "usa-input usa-input--error" },
-      "mismatches": ["GOV.UK wraps label+hint+error in govuk-form-group; USWDS uses bare label+input with usa-form-group conventions", "GOV.UK hint is a sibling div; USWDS uses usa-hint span"],
+      "target_component": "text-input",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-input": "usa-input",
+        "govuk-input--error": "usa-input usa-input--error"
+      },
+      "mismatches": [
+        "GOV.UK wraps label+hint+error in govuk-form-group; USWDS uses bare label+input with usa-form-group conventions",
+        "GOV.UK hint is a sibling div; USWDS uses usa-hint span"
+      ],
       "notes": "Carry aria-describedby wiring across"
     },
     "select": {
-      "target_component": "select", "adaptation": "css-only",
-      "classMap": { "govuk-select": "usa-select", "govuk-select--error": "usa-select usa-select--error" },
+      "target_component": "select",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-select": "usa-select",
+        "govuk-select--error": "usa-select usa-select--error"
+      },
       "mismatches": [],
       "notes": "Direct swap"
     },
     "checkboxes": {
-      "target_component": "checkbox", "adaptation": "structural",
-      "mismatches": ["GOV.UK uses fieldset/legend + govuk-checkboxes__item wrappers; USWDS uses simpler label/input pairs — DOM restructure required"],
+      "target_component": "checkbox",
+      "adaptation": "structural",
+      "mismatches": [
+        "GOV.UK uses fieldset/legend + govuk-checkboxes__item wrappers; USWDS uses simpler label/input pairs — DOM restructure required"
+      ],
       "notes": "Carry fieldset/legend and for/id associations"
     },
     "radios": {
-      "target_component": "radio-buttons", "adaptation": "structural",
-      "mismatches": ["Same wrapper-pattern difference as checkboxes"],
+      "target_component": "radio-buttons",
+      "adaptation": "structural",
+      "mismatches": [
+        "Same wrapper-pattern difference as checkboxes"
+      ],
       "notes": "Carry fieldset/legend"
     },
     "date-input": {
-      "target_component": "date-picker (memorable date)", "adaptation": "structural",
-      "mismatches": ["GOV.UK is deliberately three fields with no calendar; USWDS offers a JS calendar (date-picker) and a memorable-date equivalent — use memorable-date to preserve the no-calendar UX"],
+      "target_component": "date-picker (memorable date)",
+      "adaptation": "structural",
+      "mismatches": [
+        "GOV.UK is deliberately three fields with no calendar; USWDS offers a JS calendar (date-picker) and a memorable-date equivalent — use memorable-date to preserve the no-calendar UX"
+      ],
       "notes": "Choose usa-memorable-date to keep behaviour identical"
     },
     "notification-banner": {
-      "target_component": "alert", "adaptation": "css-only",
-      "classMap": { "govuk-notification-banner": "usa-alert", "govuk-notification-banner--success": "usa-alert usa-alert--success" },
-      "mismatches": ["GOV.UK banner carries its own title header; USWDS alert has heading inside the body", "USWDS has site-alert for government-wide banners"],
+      "target_component": "alert",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-notification-banner": "usa-alert",
+        "govuk-notification-banner--success": "usa-alert usa-alert--success"
+      },
+      "mismatches": [
+        "GOV.UK banner carries its own title header; USWDS alert has heading inside the body",
+        "USWDS has site-alert for government-wide banners"
+      ],
       "notes": "Map success→success; standard banner→usa-alert--info"
     },
     "details": {
-      "target_component": "accordion", "adaptation": "structural",
-      "mismatches": ["Native <details> has no USWDS single-item equivalent; nearest is one-section usa-accordion"],
+      "target_component": "accordion",
+      "adaptation": "structural",
+      "mismatches": [
+        "Native <details> has no USWDS single-item equivalent; nearest is one-section usa-accordion"
+      ],
       "notes": "Keep native details semantics where possible"
     },
     "table": {
-      "target_component": "table", "adaptation": "css-only",
-      "classMap": { "govuk-table": "usa-table" },
-      "mismatches": ["USWDS tables use scrollable wrapper for wide data"],
+      "target_component": "table",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-table": "usa-table"
+      },
+      "mismatches": [
+        "USWDS tables use scrollable wrapper for wide data"
+      ],
       "notes": "Caption required in both"
     },
     "breadcrumbs": {
-      "target_component": "breadcrumb", "adaptation": "css-only",
-      "classMap": { "govuk-breadcrumbs": "usa-breadcrumb" },
-      "mismatches": ["DOM differs: GOV.UK uses ol>li, USWDS uses ol>li too but different classes"],
+      "target_component": "breadcrumb",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-breadcrumbs": "usa-breadcrumb"
+      },
+      "mismatches": [
+        "DOM differs: GOV.UK uses ol>li, USWDS uses ol>li too but different classes"
+      ],
       "notes": "aria-current='page' convention identical"
     },
     "tag": {
-      "target_component": "tag", "adaptation": "css-only",
-      "classMap": { "govuk-tag": "usa-tag" },
-      "mismatches": ["USWDS tags are smaller; GOV.UK colour variants map to USWDS background utilities"],
+      "target_component": "tag",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-tag": "usa-tag"
+      },
+      "mismatches": [
+        "USWDS tags are smaller; GOV.UK colour variants map to USWDS background utilities"
+      ],
       "notes": "Text carries meaning in both"
     },
     "summary-list": {
-      "target_component": "(no equivalent)", "adaptation": "structural",
-      "mismatches": ["USWDS has no summary-list; approximate with usa-description-list or a definition list with custom classes"],
+      "target_component": "(no equivalent)",
+      "adaptation": "structural",
+      "mismatches": [
+        "USWDS has no summary-list; approximate with usa-description-list or a definition list with custom classes"
+      ],
       "notes": "Preserve dl semantics and visually-hidden change-link context"
+    },
+    "step-by-step-navigation": {
+      "target_component": "process-list",
+      "adaptation": "structural",
+      "mismatches": [
+        "USWDS process-list has no per-step collapse — weaker than app-step-nav show/hide",
+        "progress circles map, completion check maps to usa-process-list styling"
+      ],
+      "notes": "Verified in the cross-registry field test (govuk-step-by-step--uswds artifact)"
+    }
+  },
+  "govuk-to-dsfr": {
+    "target": {
+      "designSystem": "Système de Design de l'État (DSFR)",
+      "version": "1.15",
+      "registry": "https://raw.githubusercontent.com/ednark/dsfr-ai-components/main"
+    },
+    "step-by-step-navigation": {
+      "target_component": "stepper + accordion",
+      "adaptation": "structural",
+      "mismatches": [
+        "fr-stepper carries the progress bar app-step-nav lacks; per-step disclosure moves to fr-accordion"
+      ],
+      "notes": "Strongest step-navigation mapping in the registry family — verified in the field test (govuk-step-by-step--dsfr artifact)"
+    },
+    "error-summary": {
+      "target_component": "(no equivalent)",
+      "adaptation": "structural",
+      "mismatches": [
+        "DSFR handles errors per field (fr-error-text + fr-*-group--error) with no page-level summary — do not port the summary; distribute errors to fields"
+      ],
+      "notes": "Error-model asymmetry documented for agents"
+    },
+    "notification-banner": {
+      "target_component": "alert",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-notification-banner": "fr-alert",
+        "govuk-notification-banner--success": "fr-alert fr-alert--success"
+      },
+      "mismatches": [
+        "GOV.UK banner has a header bar; DSFR alert title is inline"
+      ],
+      "notes": ""
+    },
+    "accordion": {
+      "target_component": "accordion",
+      "adaptation": "structural",
+      "mismatches": [
+        "DSFR uses section>h3>button+collapse; GOV.UK uses h2>button+region — restructure with aria-expanded/aria-controls"
+      ],
+      "notes": "Both are JS-enhanced"
+    },
+    "table": {
+      "target_component": "table",
+      "adaptation": "css-only",
+      "classMap": {
+        "govuk-table": "fr-table"
+      },
+      "mismatches": [],
+      "notes": "Caption required in both"
     }
   }
 }

@@ -71,5 +71,10 @@
     }
   },
   "compatibilityPath": "compatibility.json",
-  "updated": "0.2.0"
+  "updated": "0.2.0",
+  "language": "en",
+  "contentLanguages": [
+    "en",
+    "cy (footer link)"
+  ]
 }
