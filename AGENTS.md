@@ -53,6 +53,23 @@ A structured component knowledge base for AI coding agents building UK governmen
 
 CLI: `node _base/validate-registry.mjs` (lint), `--conformance .` (certification)
 
+
+## Quality gates and declared gaps
+
+Do not retrieve or deploy a component that:
+
+- Has `costTier: "expensive"` unless the task explicitly requires the richer behavior
+- Has `requiresJs: "required"` when the delivery context has no JavaScript
+- Whose `constraints.knownLimitations` block the delivery context
+- Implements a concept declared in `gaps` (registry.config.json) — use the gap's nearestAlternative; never invent component-style classes
+- Needs layout or typography classes outside the tiles — use `infinite/core-classes.json`
+
+Registry mandates that act as gates:
+
+- GOV.UK deliberately ships no card component — use task-list, summary-list, or heading+link patterns (see declared gaps)
+- Use WCAG 2.2 AA / PSBAR 2018 compliance facts, not generic WCAG 2.1
+- One question per page; pair error-summary with every failing form
+
 ## Constraint Priority
 
 1. `constraints.preserve` — NEVER modify

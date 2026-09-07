@@ -76,6 +76,27 @@ Adaptation prose (useWhen, avoidWhen, agentPrompt, constraints, portability.clas
 
 ---
 
+
+## Quality gates and declared gaps
+
+Do not retrieve or deploy a component that:
+
+- Has `costTier: "expensive"` unless the task explicitly requires the richer behavior — avoid for mobile-primary or static contexts
+- Has `requiresJs: "required"` when the delivery context has no JavaScript
+- Whose `constraints.knownLimitations` block the delivery context
+- Implements a concept declared in `gaps` (registry.config.json) — use the gap's nearestAlternative instead; never invent a component-style class for it
+- Needs layout or typography classes outside the tiles — use `core-classes.json` (the documented untiled layer), never invented component classes
+
+Registry mandates that act as gates:
+
+- GOV.UK deliberately ships no card component — use task-list, summary-list, or heading+link patterns (see declared gaps)
+- Use WCAG 2.2 AA / PSBAR 2018 compliance facts, not generic WCAG 2.1
+- One question per page; pair error-summary with every failing form
+
+Declared gaps: see `gaps` in registry.config.json. Untiled layout/typography layer: see `infinite/core-classes.json`.
+
+---
+
 ## Output contract
 
 1. Reason — why this component over alternatives
