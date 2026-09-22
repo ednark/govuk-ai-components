@@ -15,6 +15,12 @@ GOV.UK Design System component registry for AI coding agents building UK governm
 
 ---
 
+## Appearance (resolved views)
+
+Tiles carry their component CSS inline; a generated resolved view sibling ({tile}.html -> {tile}.resolved.html) additionally carries computed geometry, colors, and typography inline for design tools and standalone preview. Index records expose the path as the resolvedView field.
+
+---
+
 ## Quick start
 
 1. Filter vocab (tiny): GET https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/facets.json

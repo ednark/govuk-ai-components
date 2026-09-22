@@ -59,7 +59,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "accordion/default.resolved.html"
     },
     {
       "file": "back-link/default.html",
@@ -110,7 +111,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "task-list-pattern"
-      ]
+      ],
+      "resolvedView": "back-link/default.resolved.html"
     },
     {
       "file": "breadcrumbs/collapse-on-mobile.html",
@@ -162,7 +164,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "page-template"
-      ]
+      ],
+      "resolvedView": "breadcrumbs/collapse-on-mobile.resolved.html"
     },
     {
       "file": "breadcrumbs/default.html",
@@ -214,7 +217,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "page-template"
-      ]
+      ],
+      "resolvedView": "breadcrumbs/default.resolved.html"
     },
     {
       "file": "button/default.html",
@@ -269,7 +273,8 @@
         "ask-users-for-information",
         "check-answers-flow",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "button/default.resolved.html"
     },
     {
       "file": "button/disabled.html",
@@ -324,7 +329,8 @@
         "ask-users-for-information",
         "check-answers-flow",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "button/disabled.resolved.html"
     },
     {
       "file": "button/start.html",
@@ -379,7 +385,8 @@
         "ask-users-for-information",
         "check-answers-flow",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "button/start.resolved.html"
     },
     {
       "file": "character-count/default.html",
@@ -431,7 +438,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "character-count/default.resolved.html"
     },
     {
       "file": "checkboxes/conditional.html",
@@ -484,7 +492,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "checkboxes/conditional.resolved.html"
     },
     {
       "file": "checkboxes/default.html",
@@ -537,7 +546,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "checkboxes/default.resolved.html"
     },
     {
       "file": "checkboxes/error.html",
@@ -590,7 +600,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "checkboxes/error.resolved.html"
     },
     {
       "file": "date-input/default.html",
@@ -642,7 +653,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "date-input/default.resolved.html"
     },
     {
       "file": "date-input/error.html",
@@ -694,7 +706,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "date-input/error.resolved.html"
     },
     {
       "file": "details/default.html",
@@ -744,7 +757,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "details/default.resolved.html"
     },
     {
       "file": "error-summary/default.html",
@@ -799,7 +813,8 @@
       "compositionRecipes": [
         "ask-users-for-information",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "error-summary/default.resolved.html"
     },
     {
       "file": "file-upload/default.html",
@@ -851,7 +866,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "file-upload/default.resolved.html"
     },
     {
       "file": "file-upload/error.html",
@@ -903,7 +919,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "file-upload/error.resolved.html"
     },
     {
       "file": "footer/default.html",
@@ -953,7 +970,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "page-template"
-      ]
+      ],
+      "resolvedView": "footer/default.resolved.html"
     },
     {
       "file": "form-group/default.html",
@@ -1007,7 +1025,8 @@
       "compositionRecipes": [
         "ask-users-for-information",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "form-group/default.resolved.html"
     },
     {
       "file": "form-group/error.html",
@@ -1061,7 +1080,8 @@
       "compositionRecipes": [
         "ask-users-for-information",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "form-group/error.resolved.html"
     },
     {
       "file": "header/default.html",
@@ -1115,7 +1135,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "page-template"
-      ]
+      ],
+      "resolvedView": "header/default.resolved.html"
     },
     {
       "file": "inset-text/default.html",
@@ -1163,7 +1184,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "check-answers-flow"
-      ]
+      ],
+      "resolvedView": "inset-text/default.resolved.html"
     },
     {
       "file": "notification-banner/default.html",
@@ -1212,7 +1234,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "notification-banner/default.resolved.html"
     },
     {
       "file": "panel/default.html",
@@ -1256,7 +1279,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "panel/default.resolved.html"
     },
     {
       "file": "phase-banner/default.html",
@@ -1307,7 +1331,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "task-list-pattern"
-      ]
+      ],
+      "resolvedView": "phase-banner/default.resolved.html"
     },
     {
       "file": "prev-next/default.html",
@@ -1356,7 +1381,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "prev-next/default.resolved.html"
     },
     {
       "file": "radios/default.html",
@@ -1409,7 +1435,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "radios/default.resolved.html"
     },
     {
       "file": "radios/error.html",
@@ -1462,7 +1489,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "radios/error.resolved.html"
     },
     {
       "file": "radios/inline.html",
@@ -1515,7 +1543,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "radios/inline.resolved.html"
     },
     {
       "file": "search-result-item/default.html",
@@ -1566,7 +1595,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "search-result-item/default.resolved.html"
     },
     {
       "file": "search-result-item/with-sub-results.html",
@@ -1617,7 +1647,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "search-result-item/with-sub-results.resolved.html"
     },
     {
       "file": "select/default.html",
@@ -1669,7 +1700,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "select/default.resolved.html"
     },
     {
       "file": "select/error.html",
@@ -1721,7 +1753,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "select/error.resolved.html"
     },
     {
       "file": "skip-link/default.html",
@@ -1773,7 +1806,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "page-template"
-      ]
+      ],
+      "resolvedView": "skip-link/default.resolved.html"
     },
     {
       "file": "step-by-step-navigation/default.html",
@@ -1822,7 +1856,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "step-by-step-navigation/default.resolved.html"
     },
     {
       "file": "step-by-step-navigation/with-completed-steps.html",
@@ -1871,7 +1906,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "step-by-step-navigation/with-completed-steps.resolved.html"
     },
     {
       "file": "summary-list/default.html",
@@ -1922,7 +1958,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "check-answers-flow"
-      ]
+      ],
+      "resolvedView": "summary-list/default.resolved.html"
     },
     {
       "file": "table/default.html",
@@ -1967,7 +2004,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "table/default.resolved.html"
     },
     {
       "file": "tabs/default.html",
@@ -2016,7 +2054,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tabs/default.resolved.html"
     },
     {
       "file": "tag/default.html",
@@ -2062,7 +2101,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "tag/default.resolved.html"
     },
     {
       "file": "task-list/default.html",
@@ -2114,7 +2154,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "task-list-pattern"
-      ]
+      ],
+      "resolvedView": "task-list/default.resolved.html"
     },
     {
       "file": "text-input/default.html",
@@ -2170,7 +2211,8 @@
       "compositionRecipes": [
         "ask-users-for-information",
         "error-summary-flow"
-      ]
+      ],
+      "resolvedView": "text-input/default.resolved.html"
     },
     {
       "file": "textarea/default.html",
@@ -2222,7 +2264,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "textarea/default.resolved.html"
     },
     {
       "file": "textarea/error.html",
@@ -2274,7 +2317,8 @@
         "form-group"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "textarea/error.resolved.html"
     },
     {
       "file": "warning-callout/default.html",
@@ -2319,7 +2363,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "warning-callout/default.resolved.html"
     }
   ]
 }
