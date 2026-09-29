@@ -82,7 +82,9 @@
       "concept": "card",
       "status": "not_part_of_design_system",
       "nearestAlternative": "task-list / summary-list / heading+link patterns",
-      "reason": "GOV.UK Design System deliberately ships no card component — flatten content to GOV.UK patterns"
+      "reason": "GOV.UK Design System deliberately ships no card component — flatten content to GOV.UK patterns",
+      "consequence": "Do not add a card component; flatten content to GOV.UK patterns (task-list, summary-list, heading+link)",
+      "source": "GOV.UK Design System published components list (https://design-system.service.gov.uk/components/) — no card component is published"
     },
     {
       "concept": "combobox",
