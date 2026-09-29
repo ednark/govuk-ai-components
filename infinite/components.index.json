@@ -1581,6 +1581,7 @@
         "publishing-frontend"
       ],
       "description": "Search/browse result item with sub-results and update dates.",
+      "origin": "live-site",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
       "nistControls": [],
@@ -1633,6 +1634,7 @@
         "publishing-frontend"
       ],
       "description": "Search/browse result item with sub-results and update dates.",
+      "origin": "live-site",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
       "nistControls": [],
@@ -1843,6 +1845,7 @@
         "publishing-frontend"
       ],
       "description": "GOV.UK step-by-step journey navigation (govuk-publishing-frontend).",
+      "origin": "live-site",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
       "nistControls": [],
@@ -1893,6 +1896,7 @@
         "publishing-frontend"
       ],
       "description": "GOV.UK step-by-step journey navigation (govuk-publishing-frontend).",
+      "origin": "live-site",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
       "nistControls": [],
