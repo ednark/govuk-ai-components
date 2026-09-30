@@ -47,6 +47,25 @@
       "extension": "govuk-organisation-logo / govuk-document-list / govuk-image-card / govuk-button--secondary-quiet",
       "note": "HMRC/CH-specific extensions in the govuk namespace (site-local, not design-system canon)",
       "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "dsit.gov.uk, food.gov.uk, mhra.gov.uk, ofqual.gov.uk",
+      "url": "https://www.dsit.gov.uk",
+      "kind": "extension",
+      "extension": "govuk-layout-super-navigation-header, govuk-image-card, govuk-document-list, govuk-subscription-links, govuk-share-links, govuk-organisation-logo, govuk-translation-nav, govuk-search-with-autocomplete, govuk-int-force-link-styles, govuk-layout-footer, govuk-layout-for-public, govuk-notice, govuk-success-alert",
+      "note": "PUBLISHING-FRONTEND APP LAYER (L6 category), identical across all 4 crawled departments. Verified absent from govuk-frontend@6.5.1 CSS and from its 41-component list — the app platform that renders www.gov.uk, not the Design System",
+      "source": "field-research/ds-survey govuk-research-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "dsit.gov.uk, food.gov.uk, mhra.gov.uk, ofqual.gov.uk",
+      "url": "https://www.dsit.gov.uk",
+      "family": "button",
+      "kind": "extension",
+      "extension": "govuk-button--secondary-quiet",
+      "note": "publishing-frontend app button variant; not in govuk-frontend 6.5.1 (the design system ships primary/secondary/inverse/start)",
+      "source": "field-research/ds-survey govuk-research-2026-09 (round 2)"
     }
   ]
 }
