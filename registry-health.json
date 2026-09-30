@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "registry": "govuk-ai-components",
+  "description": "Machine-readable trust surface: what this registry claims, and how far that claim has been checked. A registry with drift or unstamped tiles is telling you where not to trust it.",
+  "designSystem": {
+    "name": "GOV.UK Design System (govuk-frontend)",
+    "pin": "6.5.1",
+    "package": "govuk-frontend",
+    "groundTruth": "installed-package",
+    "verification": {
+      "markup": "package-templates",
+      "styling": "package-css"
+    }
+  },
+  "classCheck": {
+    "enabled": true,
+    "prefixes": [
+      "govuk-",
+      "gem-",
+      "app-"
+    ],
+    "allowlistSize": 30,
+    "categories": {
+      "canonicalUnstyled": 7,
+      "appLayer": 20,
+      "siteLayer": 0,
+      "extension": 0,
+      "drift": 3,
+      "compat": 0,
+      "registryInternal": 0,
+      "unclassified": 0
+    }
+  },
+  "stamps": {
+    "verified": 40,
+    "total": 45,
+    "percent": 89
+  },
+  "tiles": 45,
+  "families": 31,
+  "coreClasses": 15,
+  "observations": 7,
+  "convergenceWatchlist": 0,
+  "findings": {
+    "count": 3,
+    "lastDeepCheck": "2026-09-29",
+    "byResult": {
+      "broke": 2,
+      "recorded": 1
+    }
+  },
+  "conformance": "pass",
+  "generatedBy": "_base/generate-health.mjs",
+  "generatedAt": "2026-09-30"
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "registry": "govuk-ai-components",
+  "note": "GOV.UK Design System registry epistemic record. See _base/findings-ledger.md. Backfilled from 2026-09-29/30 sessions; earlier evidence lives in the project workspace (workspace/docs/lessons-learned.md).",
+  "findings": [
+    {
+      "id": "F-001",
+      "date": "2026-09-29",
+      "kind": "deep-check",
+      "result": "broke",
+      "target": [
+        "registry.config.json",
+        "18 tiles"
+      ],
+      "changed": [
+        "registry: pin corrected from the unverifiable \"5.x\" to govuk-frontend 6.5.1 (exact devDependency)",
+        "registry: classCheck enabled, then extended to the app-layer namespaces (govuk-, gem-, app-)",
+        "registry: 40/45 tiles verified and stamped; 38-entry drift register created"
+      ],
+      "evidence": [
+        "@govuk/frontend 6.5.1 dist/govuk/govuk-frontend.min.css",
+        "govuk-frontend@6.5.1 component .njk templates (41 components)",
+        "the .njk templates are the markup ground truth and the stylesheet the styling ground truth — two axes are required"
+      ],
+      "summary": "The pin was unverifiable and the registry carried v3-era markup: 18 tiles drifted from a v6 stylesheet.",
+      "detail": "The two-axis discovery was the substantive one: govuk-table__head/__row/__body are canonical v6 template classes carrying no CSS rules, so a stylesheet-only sweep reports them as drift and invites \"correcting\" a correct tile. GOV.UK also publishes govuk-publishing-frontend, whose layout-*/gem-*/app-* classes render www.gov.uk and are not in the package at all."
+    },
+    {
+      "id": "F-002",
+      "date": "2026-09-30",
+      "kind": "rework",
+      "result": "broke",
+      "target": [
+        "header/default",
+        "prev-next/default",
+        "button/disabled"
+      ],
+      "changed": [
+        "registry: 3 tiles corrected against govuk-frontend@6.5.1 templates",
+        "registry: classCheck allowlist pruned 38 -> 30 (entries for fixed classes removed — a stale entry is a lie)",
+        "registry: 40/45 tiles verified and stamped"
+      ],
+      "evidence": [
+        "components/header/template.njk + generic-header + logo macro (v6 emits a div.govuk-header with __homepage-link and __logotype)",
+        "components/pagination/template.njk (block pagination uses div.__prev/__next with rel=prev/next and an icon svg)",
+        "components/button/template.njk (v6 disables with the native attribute)"
+      ],
+      "summary": "Three pre-v4 tiles rebuilt: the header, block pagination and the disabled button.",
+      "detail": "One correction carries an accessibility lesson worth keeping: GOV.UK ships the header as a div, not <header role=\"banner\"> — the banner landmark is the page template job. The tile now says so in its limitations, because a registry that silently upgraded it to a landmark would be teaching the wrong thing."
+    },
+    {
+      "id": "F-003",
+      "date": "2026-09-29",
+      "kind": "observation",
+      "result": "recorded",
+      "target": [
+        "search-result-item",
+        "step-by-step-navigation",
+        "layout-super-navigation-header"
+      ],
+      "changed": [
+        "registry: app-layer classes documented as a distinct category in the drift register",
+        "registry: 7 observations recorded across two survey rounds"
+      ],
+      "evidence": [
+        "app-step-nav and gem-c-search-result absent from govuk-frontend — they are govuk-publishing-frontend (L6 category)",
+        "layout-*/image-card/document-list/subscription-links/share-links/organisation-logo/translation-nav/search-with-autocomplete present on all 4 crawled departments, absent from the package",
+        "9 of 28 UK sites confirmed on the gov.uk platform; 6 more unreachable from this network (ERR_CONNECTION_TIMED_OUT, not bot-blocking)"
+      ],
+      "summary": "Every department on the platform runs a consistent layer of classes that the design system does not ship.",
+      "detail": "Round 1 recorded this for two isolated components (app-step-nav, gem-c-search-result); round 2 showed it is the norm rather than an edge case, spanning header, footer, search, navigation and sharing. That is why the spec now defines the app layer as a property of a design system rather than a per-tile note."
+    }
+  ]
+}
