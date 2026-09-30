@@ -5,8 +5,7 @@
 <meta name="description" content="GOV.UK Design System pagination (prev/next) demonstrating the default variant.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pagination (prev/next) (default)</title>
-<script type="application/json" id="govuk-agent-meta">
-{
+<script type="application/json" id="govuk-agent-meta">{
   "_schemaVersion": 2,
   "discovery": {
     "gdsComponentType": "prev-next",
@@ -82,8 +81,11 @@
   },
   "constraints": {
     "preserve": [
-      "nav aria-label='Pagination'",
-      "aria-current='page' on the active item"
+      "nav.govuk-pagination.govuk-pagination--block with aria-label",
+      "div.govuk-pagination__prev / div.govuk-pagination__next (not li.pagination__item--prev)",
+      "a.govuk-link.govuk-pagination__link carrying rel=\"prev\" / rel=\"next\"",
+      "svg.govuk-pagination__icon.govuk-pagination__icon--prev / --next",
+      "span.govuk-pagination__link-title with the visually-hidden continuation"
     ],
     "editable": [
       "Link text",
@@ -101,9 +103,14 @@
     "highContrast"
   ],
   "file": "prev-next/default.html",
-  "title": "Pagination (prev/next) (default)"
-}
-</script>
+  "title": "Pagination (prev/next) (default)",
+  "provenance": {
+    "observed": "2026-09-29",
+    "method": "design-system documentation",
+    "source": "GOV.UK pagination template (components/pagination/template.njk), verified against govuk-frontend@6.5.1 (installed exact devDependency). The tile used the pre-v4 li.govuk-pagination__item--prev/__item--next; v6 block pagination emits div.govuk-pagination__prev/__next, each containing a link with rel=\"prev\"/\"next\" and a govuk-pagination__icon svg.",
+    "designSystemVersion": "6.5.1"
+  }
+}</script>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
 a.govuk-link{color:#1d70b8}
@@ -124,18 +131,18 @@ a.govuk-link{color:#1d70b8}
 </head>
 <body>
 <nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item--prev">
-      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-        <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span></span>
-      </a>
-    </li>
-    <li class="govuk-pagination__item--next">
-      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-        <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span>
-      </a>
-    </li>
-  </ul>
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13"><path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path></svg>
+      <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span></span>
+    </a>
+  </div>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13"><path d="m8.107-0.0078125-1.414 1.414 3.586-3.586h-9.9l1.293-1.293 1.414 1.414-3.586 3.586h9.9v2h-9.9l3.586 3.586-1.414 1.414-3.586-3.586z"></path></svg>
+      <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span>
+    </a>
+  </div>
 </nav>
 <div class="cap">prev-next default</div>
 </body>

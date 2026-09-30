@@ -68,6 +68,21 @@
       "migrationPath": "Re-fetch agents.json and facets.json. Tile bodies are unchanged unless listed in the drift register; body corrections go through the purity path with provenance citations.",
       "designSystemVersion": "6.5.1",
       "notes": "Deep check 2026-09-29. Two-axis verification introduced: the .njk templates are the markup ground truth and dist/govuk/govuk-frontend.min.css the styling ground truth — govuk-table__head is canonical markup with no CSS rules, which a CSS-only check misreads as drift. Fixed: checkboxes/error + radios/error (v4+ moved error state to govuk-form-group--error). Rework pending: header (v4 restructure), prev-next (pagination is now __item + __icon--prev/next), warning-callout (renamed notification-banner in v4 — the registry carries BOTH families)."
+    },
+    {
+      "version": "1.0.0",
+      "releaseDate": "2026-09-29",
+      "componentCount": 41,
+      "breakingChanges": [
+        "Pre-migration drift tiles corrected against the current templates; see notes."
+      ],
+      "addedFacets": [],
+      "metadataChanges": [
+        "classCheck allowlist pruned to the classes still in use"
+      ],
+      "migrationPath": "Re-fetch the affected tiles. Reworked tiles changed body markup; agents must not preserve the retired classes.",
+      "designSystemVersion": "6.5.1",
+      "notes": "Drift rework 2026-09-29: 3 pre-v4 tiles corrected against the govuk-frontend@6.5.1 templates — header/default (v6 emits a div.govuk-header with __homepage-link and __logotype; the six pre-v4 __link/__content/__logotype-text classes are gone, and the banner landmark is the page template job), prev-next/default (block pagination uses div.govuk-pagination__prev/__next with rel=prev/next and an icon svg, not li.__item--prev), button/disabled (native disabled attribute, not --disabled). warning-callout deliberately untouched — the family is kept by decision. 40/45 tiles verified; the 5 unstamped are the app layer (search-result-item, step-by-step-navigation) plus warning-callout."
     }
   ],
   "designSystemVersions": [

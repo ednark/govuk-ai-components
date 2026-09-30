@@ -198,10 +198,6 @@
           "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
         },
         {
-          "class": "govuk-button--disabled",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
           "class": "govuk-checkboxes",
           "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
         },
@@ -214,36 +210,8 @@
           "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
         },
         {
-          "class": "govuk-header__content",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
-          "class": "govuk-header__link",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
-          "class": "govuk-header__link--homepage",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
-          "class": "govuk-header__link--service-name",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
-          "class": "govuk-header__logotype-text",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
           "class": "govuk-js-character-count",
           "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
-        },
-        {
-          "class": "govuk-pagination__item--next",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
-        },
-        {
-          "class": "govuk-pagination__item--prev",
-          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
         },
         {
           "class": "govuk-radios",

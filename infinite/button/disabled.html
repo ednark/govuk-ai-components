@@ -5,8 +5,7 @@
 <meta name="description" content="GOV.UK Design System button demonstrating the disabled variant.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Button (disabled)</title>
-<script type="application/json" id="govuk-agent-meta">
-{
+<script type="application/json" id="govuk-agent-meta">{
   "_schemaVersion": 2,
   "discovery": {
     "gdsComponentType": "button",
@@ -90,9 +89,9 @@
   },
   "constraints": {
     "preserve": [
-      ".govuk-button class on a <button> element for form submission",
-      "type='submit' inside forms",
-      "disabled='disabled' + aria-disabled='true' for disabled buttons"
+      "button.govuk-button",
+      "disabled attribute (v6 disables with the native attribute — there is no --disabled modifier)",
+      "aria-disabled=\"true\""
     ],
     "editable": [
       "Label text",
@@ -100,6 +99,7 @@
       "Element type (button/a with button styling)"
     ],
     "limitations": [
+      "Do not add govuk-button--disabled: it is not a GOV.UK Frontend 6.x class.",
       "One primary button per view",
       "Links styled as buttons must still be real <a> elements with button classes"
     ],
@@ -121,9 +121,14 @@
         "warning": "usa-button usa-button--secondary"
       }
     }
+  },
+  "provenance": {
+    "observed": "2026-09-29",
+    "method": "design-system documentation",
+    "source": "GOV.UK button template (components/button/template.njk), verified against govuk-frontend@6.5.1 (installed exact devDependency). The tile used the pre-v4 govuk-button--disabled modifier; v6 disables a button with the native disabled attribute.",
+    "designSystemVersion": "6.5.1"
   }
-}
-</script>
+}</script>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
 a.govuk-link{color:#1d70b8}
@@ -143,7 +148,7 @@ a.govuk-link{color:#1d70b8}
 </style>
 </head>
 <body>
-<button class="govuk-button govuk-button--disabled" disabled="disabled" aria-disabled="true">Submit application</button>
+<button class="govuk-button" type="submit" disabled aria-disabled="true">Submit application</button>
 <div class="cap">button disabled</div>
 </body>
 </html>

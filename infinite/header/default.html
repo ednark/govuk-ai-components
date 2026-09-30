@@ -5,8 +5,7 @@
 <meta name="description" content="GOV.UK Design System header demonstrating the default variant.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Header (default)</title>
-<script type="application/json" id="govuk-agent-meta">
-{
+<script type="application/json" id="govuk-agent-meta">{
   "_schemaVersion": 2,
   "discovery": {
     "gdsComponentType": "header",
@@ -66,7 +65,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Set the service name in govuk-header__link--service-name. Use the with-navigation variant for top-level links; the menu toggle requires govuk-frontend JS on mobile.",
+    "agentPrompt": "Adapt the homepage URL, the logo content, and (optionally) govuk-header__product-name for a service name. Wrap in <header role=\"banner\"> if the page does not already provide the banner landmark.",
     "relatedComponents": [
       "footer",
       "skip-link",
@@ -88,9 +87,10 @@
   },
   "constraints": {
     "preserve": [
-      "header[role='banner'] semantics via .govuk-header",
-      "Logotype link to homepage",
-      "data-module='govuk-header' for menu toggle behaviour"
+      "div.govuk-header (the component is a div; the page template provides the <header role=\"banner\"> landmark)",
+      "div.govuk-header__container.govuk-width-container",
+      "div.govuk-header__logo > a.govuk-header__homepage-link",
+      "span.govuk-header__logotype with the GOV.UK svg and its accessible name"
     ],
     "editable": [
       "Service name text",
@@ -98,6 +98,7 @@
       "Container width classes"
     ],
     "limitations": [
+      "Landmark: GOV.UK ships the header as a div. If the page has no <header role=\"banner\"> wrapper, add one around it.",
       "Custom colours need the blue variants — check contrast",
       "Navigation collapses to a menu toggle below tablet width"
     ],
@@ -110,9 +111,14 @@
     "highContrast"
   ],
   "file": "header/default.html",
-  "title": "Header (default)"
-}
-</script>
+  "title": "Header (default)",
+  "provenance": {
+    "observed": "2026-09-29",
+    "method": "design-system documentation",
+    "source": "GOV.UK header template (which delegates to generic-header) + the logo macro, verified against govuk-frontend@6.5.1 (installed exact devDependency). The tile used six pre-v4 classes (govuk-header__link, __link--homepage, __logotype-text, __content, __link--service-name, and a <header role=banner> wrapper). v6 emits a div.govuk-header > __container > __logo > a.govuk-header__homepage-link > span.govuk-header__logotype; the banner landmark belongs to the page template, not the component.",
+    "designSystemVersion": "6.5.1"
+  }
+}</script>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
 a.govuk-link{color:#1d70b8}
@@ -132,20 +138,18 @@ a.govuk-link{color:#1d70b8}
 </style>
 </head>
 <body>
-<header class="govuk-header" role="banner" data-module="govuk-header">
+<div class="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
-      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+      <a href="#" class="govuk-header__homepage-link">
         <span class="govuk-header__logotype">
-          <span class="govuk-header__logotype-text">GOV.UK</span>
+          <span class="govuk-visually-hidden">GOV.UK</span>
+          <svg aria-hidden="true" focusable="false" class="govuk-header__logotype" xmlns="http://www.w3.org/2000/svg" height="30" width="148" viewBox="0 0 148 30" fill="currentcolor" aria-label="GOV.UK"><title>GOV.UK</title><g><circle cx="13.6" cy="13.6" r="13.6"/><circle cx="34.4" cy="13.6" r="13.6"/><path d="M60.9 1.4c-2.6 0-4.7 2.1-4.7 4.7v19.4h9.4V6.1c0-2.6 2.1-4.7 4.7-4.7s4.7 2.1 4.7 4.7v19.4h9.4V6.1c0-2.6-2.1-4.7-4.7-4.7h-18.8zM82.6 1.4c-2.6 0-4.7 2.1-4.7 4.7v19.4h9.4V6.1c0-2.6 2.1-4.7 4.7-4.7s4.7 2.1 4.7 4.7v19.4h9.4V6.1c0-2.6-2.1-4.7-4.7-4.7H82.6z"/><path d="M118.4 1.4c-6 0-10.8 4.9-10.8 10.9v13.2h9.4V12.3c0-3.3 2.7-6 6-6s6 2.7 6 6v13.2h9.4V12.3c0-6-4.9-10.9-10.8-10.9h-9.2zM145.4 1.4h-9.4v24.1h9.4V1.4z"/></g></svg>
         </span>
       </a>
     </div>
-    <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link--service-name">Service name</a>
-    </div>
   </div>
-</header>
+</div>
 <div class="cap">header default</div>
 </body>
 </html>
