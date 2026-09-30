@@ -69,6 +69,27 @@
       ],
       "summary": "Every department on the platform runs a consistent layer of classes that the design system does not ship.",
       "detail": "Round 1 recorded this for two isolated components (app-step-nav, gem-c-search-result); round 2 showed it is the norm rather than an edge case, spanning header, footer, search, navigation and sharing. That is why the spec now defines the app layer as a property of a design system rather than a per-tile note."
+    },
+    {
+      "id": "F-004",
+      "date": "2026-09-06",
+      "kind": "sweep",
+      "result": "fixed",
+      "target": [
+        "step-by-step-navigation/*",
+        "search-result-item/*",
+        "discovery flags"
+      ],
+      "changed": [
+        "spec: tile-format.md — provenance flags for components outside the core design system",
+        "later: promoted to a normative concept when round 2 showed it is a layer, not two components (see govuk:F-003)"
+      ],
+      "evidence": [
+        "T2 round-trip: govuk-publishing-frontend components (app-step-nav, gem-c-search-result) were flagged as not part of the core Design System",
+        "round-trip-tests/govuk-step-by-step/"
+      ],
+      "summary": "L6 — a design system ships an app layer, and its classes look identical to the design system's.",
+      "detail": "The origin of the app-layer concept. Two components came from govuk-publishing-frontend while looking like GOV.UK Design System components, and without an explicit flag an agent cannot tell doctrine from scope. What made this general was the later survey (F-003): the same layer appears on every department on the platform, across header, footer, search and sharing — so it is a property of the design system, not a per-tile note, and now has a normative definition and its own drift-register category."
     }
   ]
 }

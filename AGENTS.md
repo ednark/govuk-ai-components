@@ -98,3 +98,23 @@ categories: canonical-but-unstyled, publishing-frontend app layer (L6), and
 pre-v4 drift pending rework.
 
 **Upgrading govuk-frontend**: follow the runbook in `_base/protocol.md`.
+
+
+## Before you change a tile: read the findings ledger
+
+`infinite/findings.json` is this registry's epistemic record — what was tested,
+what broke, and what changed. It is the highest-leverage file here for one
+reason: it records the fixes, so they do not get undone by an agent that reads
+a drift register without knowing it is a register.
+
+Check the ledger before:
+- editing a tile body (a pre-migration class is not a gap — `changed` says so)
+- removing a class from the classCheck allowlist (it may be canonical markup the
+  stylesheet simply does not style)
+- changing an `origin` label, a stamp, or a `gaps` entry
+- retiring a family (it may be deprecated upstream rather than unused)
+
+A summary is generated at `registry-health.json` under `findings`, including
+`openItems` — findings that broke something and have no recorded change.
+Those are the open items; they should be closed with a fix, or re-scoped.
+See `_base/findings-ledger.md` for the schema.

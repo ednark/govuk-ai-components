@@ -42,11 +42,13 @@
   "observations": 7,
   "convergenceWatchlist": 0,
   "findings": {
-    "count": 3,
+    "count": 4,
     "lastDeepCheck": "2026-09-29",
+    "openItems": [],
     "byResult": {
       "broke": 2,
-      "recorded": 1
+      "recorded": 1,
+      "fixed": 1
     }
   },
   "conformance": "pass",
