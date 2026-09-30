@@ -9,7 +9,7 @@
       "kind": "composition",
       "extension": "govuk-layout-super-navigation-header",
       "note": "publishing-frontend super navigation header, observed on gov.uk, companieshouse, tax.service — 3 sites",
-      "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+      "source": "live-site field observation (2026-09-29); the observed site and url are this entry's site/url fields"
     },
     {
       "observed": "2026-09-29",
@@ -18,7 +18,7 @@
       "kind": "composition",
       "extension": "govuk-action-link",
       "note": "publishing-frontend action link",
-      "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+      "source": "live-site field observation (2026-09-29); the observed site and url are this entry's site/url fields"
     },
     {
       "observed": "2026-09-29",
@@ -27,7 +27,7 @@
       "kind": "other",
       "extension": "govuk-cookie-banner",
       "note": "govuk-frontend cookie banner component observed on gov.uk, companieshouse, tax.service — 3 sites; registry has no cookie-banner family — tile candidate",
-      "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+      "source": "live-site field observation (2026-09-29); the observed site and url are this entry's site/url fields"
     },
     {
       "observed": "2026-09-29",
@@ -37,7 +37,7 @@
       "kind": "other",
       "extension": "govuk-notification-banner--success",
       "note": "canon variant observed live; verify against govuk-frontend CSS at the pin before tiling",
-      "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+      "source": "live-site field observation (2026-09-29); the observed site and url are this entry's site/url fields"
     },
     {
       "observed": "2026-09-29",
@@ -46,7 +46,7 @@
       "kind": "extension",
       "extension": "govuk-organisation-logo / govuk-document-list / govuk-image-card / govuk-button--secondary-quiet",
       "note": "HMRC/CH-specific extensions in the govuk namespace (site-local, not design-system canon)",
-      "source": "field-research/ds-survey campaign crawls (2026-09-29)"
+      "source": "live-site field observation (2026-09-29); the observed site and url are this entry's site/url fields"
     },
     {
       "observed": "2026-09-29",
@@ -55,7 +55,7 @@
       "kind": "extension",
       "extension": "govuk-layout-super-navigation-header, govuk-image-card, govuk-document-list, govuk-subscription-links, govuk-share-links, govuk-organisation-logo, govuk-translation-nav, govuk-search-with-autocomplete, govuk-int-force-link-styles, govuk-layout-footer, govuk-layout-for-public, govuk-notice, govuk-success-alert",
       "note": "PUBLISHING-FRONTEND APP LAYER (L6 category), identical across all 4 crawled departments. Verified absent from govuk-frontend@6.5.1 CSS and from its 41-component list — the app platform that renders www.gov.uk, not the Design System",
-      "source": "field-research/ds-survey govuk-research-2026-09 (round 2)"
+      "source": "live-site field survey govuk-research-2026-09, round 2 (2026-09-29)"
     },
     {
       "observed": "2026-09-29",
@@ -65,7 +65,7 @@
       "kind": "extension",
       "extension": "govuk-button--secondary-quiet",
       "note": "publishing-frontend app button variant; not in govuk-frontend 6.5.1 (the design system ships primary/secondary/inverse/start)",
-      "source": "field-research/ds-survey govuk-research-2026-09 (round 2)"
+      "source": "live-site field survey govuk-research-2026-09, round 2 (2026-09-29)"
     }
   ]
 }
