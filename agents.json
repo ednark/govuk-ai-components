@@ -11,7 +11,7 @@
   "tileFetchPattern": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/{file}",
   "designSystem": {
     "name": "GOV.UK Design System",
-    "version": "5.x"
+    "version": "6.5.1"
   },
   "agentMetaId": "govuk-agent-meta",
   "tileDir": "infinite",

@@ -3,7 +3,7 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "total": 45,
-  "designSystem": "GOV.UK Design System 5.x",
+  "designSystem": "GOV.UK Design System (govuk-frontend) 6.5.1",
   "facets": {
     "gdsComponentType": {
       "accordion": 1,

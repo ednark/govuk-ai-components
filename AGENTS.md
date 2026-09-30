@@ -76,3 +76,25 @@ Registry mandates that act as gates:
 2. `constraints.limitations` — respect
 3. `instruction.agentPrompt` — adapt within boundaries
 4. `constraints.editable` — prefer
+
+## Version Sync
+
+This registry is a faithful snapshot of **GOV.UK Design System / govuk-frontend
+6.5.1** (`designSystem.version`), installed as an **exact** devDependency and
+declared to `staticView.classCheck` so class drift is caught automatically.
+
+**Two-axis verification** (introduced 2026-09-29 — important when checking this
+registry):
+- **markup** ground truth = the `.njk` component templates in the package
+- **styling** ground truth = `dist/govuk/govuk-frontend.min.css`
+
+A class can be **canonical markup with no CSS rules** — `govuk-table__head`,
+`__row` and `__body` are in the v6 templates but carry no styles (v4+ styles
+`__header`/`__cell`). A CSS-only check misreads these as drift, so verify
+against the templates before "correcting" a tile.
+
+`staticView.classCheck.allowlist` is the **drift register**, in three
+categories: canonical-but-unstyled, publishing-frontend app layer (L6), and
+pre-v4 drift pending rework.
+
+**Upgrading govuk-frontend**: follow the runbook in `_base/protocol.md`.

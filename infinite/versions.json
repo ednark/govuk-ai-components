@@ -1,15 +1,40 @@
 {
   "schemaVersion": 1,
   "registry": "govuk-ai-components",
-  "designSystem": { "name": "GOV.UK Design System", "version": "5.x", "url": "https://design-system.service.gov.uk" },
+  "designSystem": {
+    "name": "GOV.UK Design System",
+    "version": "6.5.1",
+    "url": "https://design-system.service.gov.uk"
+  },
   "versions": [
     {
       "version": "0.1.0",
       "releaseDate": "2026-09-06",
       "componentCount": 41,
       "breakingChanges": [],
-      "addedCategories": ["discovery", "selection", "instruction", "coordination", "constraints", "portability"],
-      "addedFacets": ["gdsComponentType", "section", "variant", "requiresJs", "interaction", "a11y", "govCompliance", "costTier", "prerequisites", "compositionRecipes", "piiHandling", "touchTargetSize", "supportedTokenProfiles"],
+      "addedCategories": [
+        "discovery",
+        "selection",
+        "instruction",
+        "coordination",
+        "constraints",
+        "portability"
+      ],
+      "addedFacets": [
+        "gdsComponentType",
+        "section",
+        "variant",
+        "requiresJs",
+        "interaction",
+        "a11y",
+        "govCompliance",
+        "costTier",
+        "prerequisites",
+        "compositionRecipes",
+        "piiHandling",
+        "touchTargetSize",
+        "supportedTokenProfiles"
+      ],
       "migrationPath": "Initial release.",
       "notes": "29 GOV.UK component families across forms/navigation/feedback/data-display/utilities; 5 pattern recipes; govuk→uswds compatibility map"
     },
@@ -18,14 +43,38 @@
       "releaseDate": "2026-09-06",
       "componentCount": 45,
       "breakingChanges": [],
-      "addedCategories": ["provenance"],
+      "addedCategories": [
+        "provenance"
+      ],
       "addedFacets": [],
-      "metadataChanges": ["provenance block on field-observed tiles; publishing-frontend components flagged in discovery/limitations"],
+      "metadataChanges": [
+        "provenance block on field-observed tiles; publishing-frontend components flagged in discovery/limitations"
+      ],
       "migrationPath": "Fully additive.",
       "notes": "Field-research pass (gov.uk/search/all): step-by-step-navigation (2) and search-result-item (2) added from govuk-publishing-frontend, source-flagged; provenance.json session log added"
+    },
+    {
+      "version": "1.0.0",
+      "releaseDate": "2026-09-29",
+      "componentCount": 45,
+      "breakingChanges": [
+        "Pin move 5.x -> 6.5.1: the registry carried an unverifiable major-range pin. 6 tiles drift from the v6 design system; see notes and the classCheck drift register."
+      ],
+      "addedFacets": [],
+      "metadataChanges": [
+        "designSystem.package",
+        "staticView.classCheck (govuk- prefix, 38 documented allowlist entries in three categories)"
+      ],
+      "migrationPath": "Re-fetch agents.json and facets.json. Tile bodies are unchanged unless listed in the drift register; body corrections go through the purity path with provenance citations.",
+      "designSystemVersion": "6.5.1",
+      "notes": "Deep check 2026-09-29. Two-axis verification introduced: the .njk templates are the markup ground truth and dist/govuk/govuk-frontend.min.css the styling ground truth — govuk-table__head is canonical markup with no CSS rules, which a CSS-only check misreads as drift. Fixed: checkboxes/error + radios/error (v4+ moved error state to govuk-form-group--error). Rework pending: header (v4 restructure), prev-next (pagination is now __item + __icon--prev/next), warning-callout (renamed notification-banner in v4 — the registry carries BOTH families)."
     }
   ],
   "designSystemVersions": [
-    { "version": "5.x", "status": "current", "notes": "Tiles target the GOV.UK Design System component markup" }
+    {
+      "version": "5.x",
+      "status": "current",
+      "notes": "Tiles target the GOV.UK Design System component markup"
+    }
   ]
 }

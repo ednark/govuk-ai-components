@@ -5,8 +5,7 @@
 <meta name="description" content="GOV.UK Design System checkboxes demonstrating the error variant.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkboxes (error)</title>
-<script type="application/json" id="govuk-agent-meta">
-{
+<script type="application/json" id="govuk-agent-meta">{
   "_schemaVersion": 2,
   "discovery": {
     "gdsComponentType": "checkboxes",
@@ -66,7 +65,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Edit option labels and values. For errors add govuk-checkboxes--error on the checkboxes div, govuk-form-group--error, a linked govuk-error-message, and aria-describedby on the fieldset.",
+    "agentPrompt": "Edit option labels and values. For errors add on the checkboxes div, govuk-form-group--error, a linked govuk-error-message, and aria-describedby on the fieldset.",
     "relatedComponents": [
       "radios",
       "form-group",
@@ -101,6 +100,7 @@
       "Dividers ('or') between options"
     ],
     "limitations": [
+      "Error state lives on govuk-form-group--error (v4+); there is no component-level --error modifier",
       "Conditional reveals need govuk-frontend JS",
       "Do not hide options behind conditional reveals that are always relevant"
     ],
@@ -121,9 +121,14 @@
         "label": "usa-checkbox__label"
       }
     }
+  },
+  "provenance": {
+    "observed": "2026-09-29",
+    "method": "design-system documentation",
+    "source": "Corrected to the GOV.UK Design System v4+ error pattern: the error state moved from the component modifier (govuk-checkboxes--error) to govuk-form-group--error on the form-group wrapper, per the govuk-frontend@6.5.1 checkboxes template. Verified against the installed package (exact pin 6.5.1).",
+    "designSystemVersion": "6.5.1"
   }
-}
-</script>
+}</script>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
 a.govuk-link{color:#1d70b8}
@@ -151,7 +156,7 @@ a.govuk-link{color:#1d70b8}
     <p id="waste-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span> Select at least one type of waste
     </p>
-    <div class="govuk-checkboxes govuk-checkboxes--error" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-ea" name="waste" type="checkbox" value="carcasses">
         <label class="govuk-label govuk-checkboxes__label" for="waste-ea">Waste from animal carcasses</label>

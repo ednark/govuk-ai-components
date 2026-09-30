@@ -12,9 +12,11 @@
   "metadataSchemaVersion": 2,
   "tileFetchPattern": "https://raw.githubusercontent.com/ednark/govuk-ai-components/main/infinite/{file}",
   "designSystem": {
-    "name": "GOV.UK Design System",
-    "version": "5.x",
-    "url": "https://design-system.service.gov.uk"
+    "name": "GOV.UK Design System (govuk-frontend)",
+    "version": "6.5.1",
+    "url": "https://design-system.service.gov.uk",
+    "package": "govuk-frontend",
+    "notes": "Ground truth: govuk-frontend@6.5.1 installed as an EXACT devDependency. Two-axis verification: the .njk templates are the markup ground truth and dist/govuk/govuk-frontend.min.css the styling ground truth. A class can be canonical markup with no CSS rules (e.g. govuk-table__head) — the classCheck allowlist distinguishes the three categories (structural, app layer, pre-v4 drift)."
   },
   "facets": [
     "gdsComponentType",
@@ -71,7 +73,7 @@
     }
   },
   "compatibilityPath": "compatibility.json",
-  "updated": "0.2.0",
+  "updated": "1.0.0",
   "language": "en",
   "contentLanguages": [
     "en",
@@ -94,12 +96,171 @@
     }
   ],
   "staticView": {
-    "css": [],
+    "css": [
+      "node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.css"
+    ],
     "viewport": {
       "width": 1280,
       "height": 4000
     },
-    "note": "Resolved-view generation input (see _base/generate-resolved-view.mjs). Tiles are self-contained; no design-system CSS injection needed."
+    "note": "Resolved-view generation input (see _base/generate-resolved-view.mjs). Tiles are self-contained; no design-system CSS injection needed.",
+    "classCheck": {
+      "prefix": "govuk-",
+      "allowlist": [
+        {
+          "class": "app-step-nav",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__body",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__circle",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__circle--number",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__circle-background",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__circle-inner",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__header",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__heading",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__panel",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__step",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav__steps",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "app-step-nav--large",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__description",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__metadata",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__sub-result-description",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__sub-result-link",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__sub-results",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__title",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "gem-c-search-result__title-link",
+          "reason": "Publishing-frontend app layer, not a GOV.UK Design System component (L6 category) — app-step-nav / gem-c-search-result."
+        },
+        {
+          "class": "govuk-button--disabled",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-checkboxes",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-file-upload--error",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-header__container",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-header__content",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-header__link",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-header__link--homepage",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-header__link--service-name",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-header__logotype-text",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-js-character-count",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-pagination__item--next",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-pagination__item--prev",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-radios",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-table__body",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-table__head",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-table__row",
+          "reason": "Canonical structural class: present in the govuk-frontend@6.5.1 templates, carries no CSS rules by design (v4+ styles __header/__cell instead of __head/__row/__body)."
+        },
+        {
+          "class": "govuk-warning-callout",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        },
+        {
+          "class": "govuk-warning-callout__title",
+          "reason": "Pre-v4 drift: class does not exist in govuk-frontend 6.5.1. Rework pending against the v6 templates."
+        }
+      ]
+    }
   },
   "modifierSeparators": [
     "--",

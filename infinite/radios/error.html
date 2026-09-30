@@ -5,8 +5,7 @@
 <meta name="description" content="GOV.UK Design System radios demonstrating the error variant.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radios (error)</title>
-<script type="application/json" id="govuk-agent-meta">
-{
+<script type="application/json" id="govuk-agent-meta">{
   "_schemaVersion": 2,
   "discovery": {
     "gdsComponentType": "radios",
@@ -67,7 +66,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Edit option labels and values. govuk-radios--inline stacks options horizontally for short labels. For errors add govuk-radios--error, govuk-form-group--error, linked govuk-error-message, and aria-describedby on the fieldset.",
+    "agentPrompt": "Edit option labels and values. govuk-radios--inline stacks options horizontally for short labels. For errors add, govuk-form-group--error, linked govuk-error-message, and aria-describedby on the fieldset.",
     "relatedComponents": [
       "checkboxes",
       "form-group",
@@ -102,6 +101,7 @@
       "Inline modifier for short options"
     ],
     "limitations": [
+      "Error state lives on govuk-form-group--error (v4+); there is no component-level --error modifier",
       "Inline variant only for options with very short labels"
     ],
     "portableInvariants": [
@@ -121,9 +121,14 @@
         "label": "usa-radio__label"
       }
     }
+  },
+  "provenance": {
+    "observed": "2026-09-29",
+    "method": "design-system documentation",
+    "source": "Corrected to the GOV.UK Design System v4+ error pattern: the error state moved from the component modifier (govuk-radios--error) to govuk-form-group--error on the form-group wrapper, per the govuk-frontend@6.5.1 radios template. Verified against the installed package (exact pin 6.5.1).",
+    "designSystemVersion": "6.5.1"
   }
-}
-</script>
+}</script>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.31578;margin:0;padding:2rem;color:#0b0c0c}
 a.govuk-link{color:#1d70b8}
@@ -151,7 +156,7 @@ a.govuk-link{color:#1d70b8}
     <p id="where-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span> Select where you live
     </p>
-    <div class="govuk-radios govuk-radios--error" data-module="govuk-radios">
+    <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-err-england" name="where" type="radio" value="england">
         <label class="govuk-label govuk-radios__label" for="where-err-england">England</label>
