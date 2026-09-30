@@ -16,7 +16,13 @@
     "version": "6.5.1",
     "url": "https://design-system.service.gov.uk",
     "package": "govuk-frontend",
-    "notes": "Ground truth: govuk-frontend@6.5.1 installed as an EXACT devDependency. Two-axis verification: the .njk templates are the markup ground truth and dist/govuk/govuk-frontend.min.css the styling ground truth. A class can be canonical markup with no CSS rules (e.g. govuk-table__head) — the classCheck allowlist distinguishes the three categories (structural, app layer, pre-v4 drift)."
+    "notes": "Ground truth: govuk-frontend@6.5.1 installed as an EXACT devDependency. Two-axis verification: the .njk templates are the markup ground truth and dist/govuk/govuk-frontend.min.css the styling ground truth. A class can be canonical markup with no CSS rules (e.g. govuk-table__head) — the classCheck allowlist distinguishes the three categories (structural, app layer, pre-v4 drift).",
+    "verification": {
+      "markup": "package-templates",
+      "styling": "package-css",
+      "packagePath": "node_modules/govuk-frontend/dist/govuk",
+      "groundTruth": "installed-package"
+    }
   },
   "facets": [
     "gdsComponentType",
@@ -105,7 +111,11 @@
     },
     "note": "Resolved-view generation input (see _base/generate-resolved-view.mjs). Tiles are self-contained; no design-system CSS injection needed.",
     "classCheck": {
-      "prefix": "govuk-",
+      "prefix": [
+        "govuk-",
+        "gem-",
+        "app-"
+      ],
       "allowlist": [
         {
           "class": "app-step-nav",
